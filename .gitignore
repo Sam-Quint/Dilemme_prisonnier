@@ -1,0 +1,18 @@
+# .gitignore file to exclude specific files and directories from being tracked by Git
+
+# Ignore the Data folders for Bronze, Silver, and Gold
+Data/Bronze/*
+Data/Silver/*
+Data/Gold/*
+
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+requirements.txt
+
+# Ignore the .env file that contains environment variables
+.env
+
+# Ignore the claude folder
+.claude

@@ -1,0 +1,124 @@
+import json
+import uuid
+from datetime import datetime
+from pathlib import Path
+import random
+
+import ollama
+
+from personnalites import CHOIX_FIXES, PROMPT_REFLEXION, MODEL, build_prompt_reflexion, choix_hazard
+
+BRONZE_DIR = Path(__file__).parent.parent / "Data" / "Bronze"
+
+RESULTATS = {
+    ("Coopéré", "Coopéré"): ("Libre",         "Libre"),
+    ("Coopéré", "Trahir"):  ("Prison_max",     "Libre"),
+    ("Trahir",  "Coopéré"): ("Libre",          "Prison_max"),
+    ("Trahir",  "Trahir"):  ("Peine_partagée", "Peine_partagée"),
+}
+
+
+def parse_choix(texte: str) -> str:
+    texte = texte.strip().lower()
+    if "trahir" in texte or "trahit" in texte:
+        return "Trahir"
+    if "coop" in texte:
+        return "Coopéré"
+    return "Coopéré"  # fallback si réponse incompréhensible
+
+
+def get_choix(personnalite: str, historique_self: list[dict] = None) -> str:
+    if personnalite in CHOIX_FIXES:
+        return CHOIX_FIXES[personnalite]
+
+    if personnalite == "Hazard":
+        return choix_hazard()
+
+    # Seule Réflexion passe par Ollama
+    response = ollama.chat(
+        model=MODEL,
+        messages=[
+            {"role": "system", "content": PROMPT_REFLEXION},
+            {"role": "user",   "content": build_prompt_reflexion(historique_self or [])},
+        ],
+    )
+    return parse_choix(response["message"]["content"])
+
+
+def run_tournoi(personnalite_a: str, personnalite_b: str, nb_tours: int) -> dict:
+    id_tournoi = str(uuid.uuid4())[:8]
+    runs = []
+
+    # Historiques séparés pour Réflexion (point de vue de chaque joueur)
+    historique_a = []
+    historique_b = []
+
+    for i in range(1, nb_tours + 1):
+        choix_a = get_choix(personnalite_a, historique_a)
+        choix_b = get_choix(personnalite_b, historique_b)
+
+        resultat_a, resultat_b = RESULTATS[(choix_a, choix_b)]
+
+        run = {
+            "Run":        i,
+            "Choix_P_A":  choix_a,
+            "Choix_P_B":  choix_b,
+            "Resultat_P_A": resultat_a,
+            "Resultat_P_B": resultat_b,
+        }
+        runs.append(run)
+
+        historique_a.append({
+            "Run":             i,
+            "Choix_P_self":    choix_a,
+            "Choix_P_adverse": choix_b,
+            "Resultat_P_self": resultat_a,
+        })
+        historique_b.append({
+            "Run":             i,
+            "Choix_P_self":    choix_b,
+            "Choix_P_adverse": choix_a,
+            "Resultat_P_self": resultat_b,
+        })
+
+        print(f"  Round {i:3d} | A={choix_a:<10} B={choix_b:<10} | {resultat_a} / {resultat_b}")
+
+    return {
+        "ID_Tournoi": id_tournoi,
+        "Date":       datetime.now().isoformat(),
+        "Nb_tour":    nb_tours,
+        "Player_A":   personnalite_a,
+        "Player_B":   personnalite_b,
+        "Runs":       runs,
+    }
+
+
+def sauvegarder(tournoi: dict) -> Path:
+    BRONZE_DIR.mkdir(parents=True, exist_ok=True)
+    chemin = BRONZE_DIR / f"tournoi_{tournoi['ID_Tournoi']}.json"
+    with open(chemin, "w", encoding="utf-8") as f:
+        json.dump(tournoi, f, ensure_ascii=False, indent=2)
+    return chemin
+
+# Liste des personnalités disponibles
+# - "Coopérer" : toujours coopère
+# - "Trahir"   : toujours trahit
+# - "Hazard"   : choix aléatoire
+# - "Réflexion" : utilise l'historique pour décider (via Ollama
+
+
+if __name__ == "__main__":
+    Random = True
+    if Random:
+        personnalite_a = random.choice(["Coopéré", "Trahir", "Hazard", "Réflexion"])
+        personnalite_b = random.choice(["Coopéré", "Trahir", "Hazard", "Réflexion"])
+        nb_tours       = random.randint(1000, 10000)
+    else:
+        personnalite_a = "Hazard"
+        personnalite_b = "Trahir"
+        nb_tours       = 1000
+
+    print(f"\nTournoi : {personnalite_a} vs {personnalite_b} ({nb_tours} rounds)\n")
+    tournoi = run_tournoi(personnalite_a, personnalite_b, nb_tours)
+    chemin  = sauvegarder(tournoi)
+    print(f"\nSauvegardé : {chemin}")
