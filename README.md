@@ -38,7 +38,6 @@ Dans ce cas, les deux ont trahit l'autre et donc les deux on obtenue une peine d
 - \ Tournois \ tournoi.py                                                       <------ Script qui gère les tounois et le déroulé. 
 - \ Tournois \ personnalites.py                                                 <------ Gère les personnalités et leur choix.
 
-
 - \ Traitement \ Transforme_json_to_parquet.py                                  <------ Transforme JSON en parquet
 
 - \ Windmill \ s1_Bronze.py                                                     <------ Transforme JSON en parquet pour windmill
@@ -70,10 +69,10 @@ Dans ce cas, les deux ont trahit l'autre et donc les deux on obtenue une peine d
 ### Possibilité 
 
 Personnalité : 
-- Coopérer
-- Hazard
-- Reflexion
-- Trahir
+- Coopérer : coopère tout le temps
+- Hazard : choisit au hazard
+- Reflexion : réagit en fonction de son taux de libération
+- Trahir : trahit tout le temps
 - TitforTat" : coopère au premier round, puis imite le choix de l'adversaire au round précédent (non implémenté ici)
 - "GrimTrigger": coopère tant que l'adversaire coopère, mais trahit à jamais si l'adversaire trahit une fois (non implémenté ici)
 - "RandomTitforTat": coopère au premier round, puis imite le choix de l'adversaire au round précédent avec une probabilité de 80%, sinon fait un choix aléatoire (non implémenté ici)
@@ -109,7 +108,7 @@ Si vous Coopéré ensemble vous êtes tout les deux libre.
 Si tu coopère mais ton camarade te trahit, il est libre et toi tu obtiens prison à vie. 
 Si tu trahit et lui coopère, tu es libre et lui obtiens la prison à vie. 
 Si vous vous trahissez mutuellement, vous avez tout les deux une peine de prison allégé. 
-Tu dois réfléchir en fonction de ce qui ce passe. 
+Tu dois réfléchir en fonction de ton taux de libération.
 
 Réponse : 
 Tu réponds toujours "Coopéré" ou "Trahit"

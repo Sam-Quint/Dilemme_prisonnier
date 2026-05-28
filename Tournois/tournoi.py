@@ -17,8 +17,6 @@ RESULTATS = {
     ("Trahir",  "Trahir"):  ("Peine_partagée", "Peine_partagée"),
 }
 
-
-
 def get_choix(personnalite: str, historique_self: list[dict] = None) -> str:
     if personnalite in CHOIX_FIXES:
         return CHOIX_FIXES[personnalite]
@@ -106,11 +104,11 @@ if __name__ == "__main__":
     if Random:
         personnalite_a = random.choice(["Coopéré", "Trahir", "Hazard", "Réflexion"])
         personnalite_b = random.choice(["Coopéré", "Trahir", "Hazard", "Réflexion"])
-        nb_tours       = random.randint(1000, 3000)
+        nb_tours       = 2000 #random.randint(1000, 3000)
     else:
         personnalite_a = "Hazard"
         personnalite_b = "Trahir"
-        nb_tours       = 1000
+        nb_tours       = 2000
 
     tournoi = run_tournoi(personnalite_a, personnalite_b, nb_tours)
     chemin  = sauvegarder(tournoi)
