@@ -2,8 +2,11 @@
 
 # Ignore the Data folders for Bronze, Silver, and Gold
 Data/Bronze/*
+!Data/Bronze/.gitkeep
 Data/Silver/*
+!Data/Silver/.gitkeep
 Data/Gold/*
+!Data/Gold/.gitkeep
 
 .venv/
 __pycache__/
