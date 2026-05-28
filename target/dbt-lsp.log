@@ -7,3 +7,1886 @@
 11:51:27.498838 [info ]: Starting LSP server...
 11:51:27.517442 [info ]: Loading profiles.yml
 11:51:27.546342 [info ]: Waiting for lease on 'target' directory
+11:51:28.099779 [info ]: Started loading project
+11:51:28.100525 [info ]: Loading profiles.yml
+11:51:28.106430 [debug]:    Started loading packages
+11:51:28.108642 [debug]:     Loaded [  0.00s] packages
+11:51:28.109871 [info ]: Started parsing
+11:51:28.133320 [info ]: Finished loading project [  0.03s]
+11:51:28.135378 [debug]: Finished parsing models\marts\schema.yml [  0.00s]
+11:51:28.136274 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+11:51:28.139246 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+11:51:28.140030 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+11:51:28.140620 [debug]: Finished parsing models\staging\stg_runs.sql [  0.00s]
+11:51:28.144098 [debug]: Finished parsing models\staging\stg_tournois.sql [  0.00s]
+11:51:28.145137 [info ]: Finished parsing [  0.04s]
+11:51:28.145644 [info ]: Cached model count updated: 4 models (estimate)
+11:51:28.145659 [info ]: Cached model count updated: 4 models (accurate)
+11:51:28.145739 [info ]: Started scheduling
+11:51:28.146006 [info ]: Finished scheduling [  0.00s]
+11:51:28.146040 [debug]: Compilation - 4 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_runs", "model.dilemme_prisonnier.stg_tournois"}
+11:51:28.146073 [info ]: Started scheduling
+11:51:28.146101 [info ]: Finished scheduling [  0.00s]
+11:51:28.294326 [info ]: Started building task graph
+11:51:28.294511 [info ]: Finished building task graph [  0.00s]
+11:51:28.294859 [info ]: Started rendering (4 nodes)
+11:51:28.294919 [info ]: Started model main.mart_player_performance
+11:51:28.294954 [debug]: Started rendering model main.mart_player_performance
+11:51:28.294993 [info ]: Started model main.mart_tournois_stats
+11:51:28.295002 [debug]: Started rendering model main.mart_tournois_stats
+11:51:28.295015 [info ]: Started model main.stg_tournois
+11:51:28.295019 [debug]: Started rendering model main.stg_tournois
+11:51:28.295080 [info ]: Started model main.stg_runs
+11:51:28.295123 [debug]: Started rendering model main.stg_runs
+11:51:28.297592 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+11:51:28.297609 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+11:51:28.297607 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_tournois at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_tournois.sql
+11:51:28.297652 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_runs at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_runs.sql
+11:51:28.297900 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+11:51:28.297943 [info ]: Started analyzing (4 nodes)
+11:51:28.297956 [debug]: Started analyzing model main.mart_tournois_stats
+11:51:28.297973 [debug]: Finished rendering [  0.00s] model main.stg_runs [success]
+11:51:28.297982 [debug]: Started analyzing model main.stg_runs
+11:51:28.297993 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+11:51:28.297999 [debug]: Started analyzing model main.mart_player_performance
+11:51:28.298012 [debug]: Finished rendering [  0.00s] model main.stg_tournois [success]
+11:51:28.298017 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+11:51:28.298025 [debug]: Started analyzing model main.stg_tournois
+11:51:28.303931 [debug]: Finished analyzing [  0.01s] model main.stg_runs [success]
+11:51:28.303969 [info ]:  Succeeded [  0.01s] model main.stg_runs (view)
+11:51:28.304402 [debug]: Finished analyzing [  0.01s] model main.stg_tournois [success]
+11:51:28.304443 [info ]:  Succeeded [  0.01s] model main.stg_tournois (view)
+11:51:28.307803 [debug]: Finished analyzing [  0.01s] model main.mart_player_performance [success]
+11:51:28.307817 [info ]:  Succeeded [  0.01s] model main.mart_player_performance (table)
+11:51:28.316181 [debug]: Finished analyzing [  0.02s] model main.mart_tournois_stats [success]
+11:51:28.316212 [info ]: Finished analyzing [  0.02s] (4 nodes, 0 skipped, 0 errors)
+11:51:28.316220 [info ]:  Succeeded [  0.02s] model main.mart_tournois_stats (table)
+11:51:28.318976 [info ]: Started scheduling
+11:51:28.319018 [info ]: Finished scheduling [  0.00s]
+11:51:28.319362 [info ]: Cached model count updated: 4 models (accurate)
+11:51:29.829447 [info ]: Started loading project
+11:51:29.829915 [info ]: Loading profiles.yml
+11:51:29.847438 [info ]: Cached model count updated: 4 models (estimate)
+11:51:29.847458 [info ]: Cached model count updated: 4 models (accurate)
+11:51:29.847479 [info ]: Started scheduling
+11:51:29.847525 [info ]: Finished scheduling [  0.00s]
+11:51:29.847539 [debug]: Compilation - 4 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_runs", "model.dilemme_prisonnier.stg_tournois"}
+11:51:29.973043 [info ]: Started building task graph
+11:51:29.973103 [info ]: Finished building task graph [  0.00s]
+11:51:29.973218 [info ]: Started rendering (4 nodes)
+11:51:29.973233 [info ]: Started model main.mart_player_performance
+11:51:29.973242 [debug]: Started rendering model main.mart_player_performance
+11:51:29.973260 [info ]: Started model main.mart_tournois_stats
+11:51:29.973266 [debug]: Started rendering model main.mart_tournois_stats
+11:51:29.973274 [info ]: Started model main.stg_tournois
+11:51:29.973278 [debug]: Started rendering model main.stg_tournois
+11:51:29.973284 [info ]: Started model main.stg_runs
+11:51:29.973288 [debug]: Started rendering model main.stg_runs
+11:51:29.973319 [info ]: Finished loading project [  0.14s]
+11:51:29.975333 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+11:51:29.975419 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+11:51:29.975447 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_tournois at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_tournois.sql
+11:51:29.975455 [info ]: Started analyzing (4 nodes)
+11:51:29.975464 [debug]: Started analyzing model main.mart_player_performance
+11:51:29.975581 [debug]: Finished rendering [  0.00s] model main.stg_tournois [success]
+11:51:29.975605 [debug]: Started analyzing model main.stg_tournois
+11:51:29.975889 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+11:51:29.975903 [info ]:  Succeeded [  0.00s] model main.mart_player_performance (table)
+11:51:29.975919 [debug]: Finished analyzing [  0.00s] model main.stg_tournois [success]
+11:51:29.975924 [info ]:  Succeeded [  0.00s] model main.stg_tournois (view)
+11:51:29.976305 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_runs at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_runs.sql
+11:51:29.976373 [debug]: Finished rendering [  0.00s] model main.stg_runs [success]
+11:51:29.976390 [debug]: Started analyzing model main.stg_runs
+11:51:29.976466 [debug]: Finished analyzing [  0.00s] model main.stg_runs [success]
+11:51:29.976473 [info ]:  Succeeded [  0.00s] model main.stg_runs (view)
+11:51:29.979421 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+11:51:29.979523 [debug]: Finished rendering [  0.01s] model main.mart_tournois_stats [success]
+11:51:29.979542 [info ]: Finished rendering [  0.01s] (4 nodes, 0 skipped, 0 errors)
+11:51:29.979559 [debug]: Started analyzing model main.mart_tournois_stats
+11:51:29.982170 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+11:51:29.982191 [info ]: Finished analyzing [  0.01s] (4 nodes, 0 skipped, 0 errors)
+11:51:29.982198 [info ]:  Succeeded [  0.01s] model main.mart_tournois_stats (table)
+11:51:29.984940 [info ]: Started scheduling
+11:51:29.984979 [info ]: Finished scheduling [  0.00s]
+11:51:29.985766 [info ]: Cached model count updated: 4 models (accurate)
+11:57:07.195310 [info ]: Started loading project
+11:57:07.195989 [info ]: Loading profiles.yml
+11:57:07.199998 [info ]: Started loading project
+11:57:07.200533 [info ]: Loading profiles.yml
+11:57:07.200576 [info ]: Finished loading project [  0.01s]
+11:57:07.205281 [debug]:    Started loading packages
+11:57:07.206999 [debug]:     Loaded [  0.00s] packages
+11:57:07.207693 [info ]: Started parsing
+11:57:07.228091 [info ]: Finished loading project [  0.03s]
+11:57:07.229097 [debug]: Finished parsing models\marts\schema.yml [  0.00s]
+11:57:07.229537 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+11:57:07.231224 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+11:57:07.234101 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+11:57:07.234073 [warn ]: dbt1089: Unused schema.yml entry for model 'stg_runs'
+  --> models\staging\schema.yml
+11:57:07.234270 [warn ]: dbt1089: Unused schema.yml entry for model 'stg_tournois'
+  --> models\staging\schema.yml
+11:57:07.236811 [error]: dbt1048: Ref 'stg_tournois' not found in project. Searched for 'dilemme_prisonnier.stg_tournois, stg_tournois'
+  --> models\marts\mart_tournois_stats.sql:30:6
+11:57:07.236843 [error]: dbt1048: Ref 'stg_runs' not found in project. Searched for 'dilemme_prisonnier.stg_runs, stg_runs'
+  --> models\marts\mart_tournois_stats.sql:31:6
+11:57:07.237757 [info ]: Cached model count updated: 2 models (estimate)
+11:57:07.237771 [info ]: Cached model count updated: 2 models (accurate)
+11:57:07.237792 [info ]: Started scheduling
+11:57:07.237828 [info ]: Finished scheduling [  0.00s]
+11:57:07.237843 [debug]: Compilation - 0 nodes selected: {}
+11:57:07.238040 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+11:57:07.238052 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:57:07.238062 [info ]: Started scheduling
+11:57:07.238099 [info ]: Finished scheduling [  0.00s]
+11:57:07.401526 [info ]: Started building task graph
+11:57:07.401567 [info ]: Finished building task graph [  0.00s]
+11:57:07.405106 [info ]: Started scheduling
+11:57:07.405153 [info ]: Finished scheduling [  0.00s]
+11:57:07.410366 [info ]: Cached model count updated: 2 models (accurate)
+11:57:07.410436 [info ]: Finished parsing [  0.20s]
+11:57:08.927833 [info ]: Started loading project
+11:57:08.928373 [info ]: Loading profiles.yml
+11:57:08.947053 [info ]: Cached model count updated: 2 models (estimate)
+11:57:08.947075 [info ]: Cached model count updated: 2 models (accurate)
+11:57:08.947094 [info ]: Started scheduling
+11:57:08.947132 [info ]: Finished scheduling [  0.00s]
+11:57:08.947143 [debug]: Compilation - 2 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats"}
+11:57:09.076917 [info ]: Started building task graph
+11:57:09.076979 [info ]: Finished building task graph [  0.00s]
+11:57:09.077085 [info ]: Started rendering (2 nodes)
+11:57:09.077104 [info ]: Started model main.mart_player_performance
+11:57:09.077117 [debug]: Started rendering model main.mart_player_performance
+11:57:09.077139 [info ]: Started model main.mart_tournois_stats
+11:57:09.077146 [debug]: Started rendering model main.mart_tournois_stats
+11:57:09.077169 [info ]: Finished loading project [  0.15s]
+11:57:09.078297 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+11:57:09.078462 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+11:57:09.078493 [info ]: Started analyzing (2 nodes)
+11:57:09.078503 [debug]: Started analyzing model main.mart_player_performance
+11:57:09.079031 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+11:57:09.079047 [info ]:  Succeeded [  0.00s] model main.mart_player_performance (table)
+11:57:09.081023 [error]: dbt1501: Failed to render SQL not a key type: ref not found for package: dilemme_prisonnier, model: stg_tournois, version: None
+(in models\marts\mart_tournois_stats.sql:30:6)
+  --> models\marts\mart_tournois_stats.sql:30:6
+11:57:09.081215 [debug]: Started analyzing model main.mart_tournois_stats
+11:57:09.081451 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [skipped]
+11:57:09.081470 [info ]: Finished analyzing [  0.00s] (2 nodes, 1 skipped, 0 errors)
+11:57:09.081477 [info ]:     Failed [  0.00s] model main.mart_tournois_stats (table)
+11:57:09.084567 [info ]: Started scheduling
+11:57:09.084604 [info ]: Finished scheduling [  0.00s]
+11:57:09.085383 [info ]: Cached model count updated: 2 models (accurate)
+11:57:09.085409 [debug]: Finished rendering [  0.01s] model main.mart_tournois_stats [error]
+11:57:09.085419 [info ]: Finished rendering [  0.01s] (2 nodes, 0 skipped, 1 errors)
+11:57:12.776006 [info ]: Started loading project
+11:57:12.776587 [info ]: Loading profiles.yml
+11:57:12.779099 [info ]: Started loading project
+11:57:12.779454 [info ]: Loading profiles.yml
+11:57:12.779526 [info ]: Finished loading project [  0.00s]
+11:57:12.784460 [debug]:    Started loading packages
+11:57:12.785798 [debug]:     Loaded [  0.00s] packages
+11:57:12.786398 [info ]: Started parsing
+11:57:12.811498 [info ]: Finished loading project [  0.03s]
+11:57:12.814012 [info ]: Finished parsing [  0.03s]
+11:57:12.814151 [info ]: Cached model count updated: 0 models (estimate)
+11:57:12.814164 [info ]: Cached model count updated: 0 models (accurate)
+11:57:12.814175 [info ]: Started scheduling
+11:57:12.814196 [info ]: Finished scheduling [  0.00s]
+11:57:12.814205 [debug]: Compilation - 0 nodes selected: {}
+11:57:12.814214 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+11:57:12.814223 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:57:12.814228 [info ]: Started scheduling
+11:57:12.814233 [info ]: Finished scheduling [  0.00s]
+11:57:12.957740 [info ]: Started building task graph
+11:57:12.957774 [info ]: Finished building task graph [  0.00s]
+11:57:12.960141 [info ]: Started scheduling
+11:57:12.960178 [info ]: Finished scheduling [  0.00s]
+11:57:12.962001 [info ]: Cached model count updated: 0 models (accurate)
+11:57:13.206695 [info ]: Waiting for lease on 'target' directory
+11:57:13.325458 [info ]: Started loading project
+11:57:13.325956 [info ]: Loading profiles.yml
+11:57:13.343215 [info ]: Finished loading project [  0.02s]
+11:57:13.343392 [info ]: Cached model count updated: 0 models (accurate)
+11:57:14.858997 [info ]: Started loading project
+11:57:14.859427 [info ]: Loading profiles.yml
+11:57:14.873952 [info ]: Cached model count updated: 0 models (estimate)
+11:57:14.873973 [info ]: Cached model count updated: 0 models (accurate)
+11:57:14.873986 [info ]: Started scheduling
+11:57:14.874005 [info ]: Finished scheduling [  0.00s]
+11:57:14.874014 [debug]: Compilation - 0 nodes selected: {}
+11:57:14.874021 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:57:14.996050 [info ]: Started building task graph
+11:57:14.996081 [info ]: Finished building task graph [  0.00s]
+11:57:14.998579 [info ]: Started scheduling
+11:57:14.998609 [info ]: Finished scheduling [  0.00s]
+11:57:14.998842 [info ]: Finished loading project [  0.14s]
+11:57:14.999747 [info ]: Cached model count updated: 0 models (accurate)
+11:57:39.604436 [info ]: Started loading project
+11:57:39.604995 [info ]: Loading profiles.yml
+11:57:39.607747 [info ]: Started loading project
+11:57:39.608155 [info ]: Loading profiles.yml
+11:57:39.608219 [info ]: Finished loading project [  0.00s]
+11:57:39.612743 [debug]:    Started loading packages
+11:57:39.614393 [debug]:     Loaded [  0.00s] packages
+11:57:39.615013 [info ]: Started parsing
+11:57:39.635278 [info ]: Finished loading project [  0.03s]
+11:57:39.637739 [debug]: Finished parsing models\staging\stg_tournois.sql [  0.00s]
+11:57:39.638523 [info ]: Finished parsing [  0.02s]
+11:57:39.638802 [info ]: Cached model count updated: 1 models (estimate)
+11:57:39.638816 [info ]: Cached model count updated: 1 models (accurate)
+11:57:39.638832 [info ]: Started scheduling
+11:57:39.638860 [info ]: Finished scheduling [  0.00s]
+11:57:39.638870 [debug]: Compilation - 0 nodes selected: {}
+11:57:39.638880 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+11:57:39.638887 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:57:39.638893 [info ]: Started scheduling
+11:57:39.638908 [info ]: Finished scheduling [  0.00s]
+11:57:39.769276 [info ]: Started building task graph
+11:57:39.769307 [info ]: Finished building task graph [  0.00s]
+11:57:39.771916 [info ]: Started scheduling
+11:57:39.771952 [info ]: Finished scheduling [  0.00s]
+11:57:39.773687 [info ]: Cached model count updated: 1 models (accurate)
+11:57:41.290971 [info ]: Cached model count updated: 1 models (accurate)
+11:57:41.291614 [info ]: Waiting for lease on 'target' directory
+11:57:41.835189 [info ]: Started loading project
+11:57:41.835712 [info ]: Loading profiles.yml
+11:57:41.838107 [info ]: Started loading project
+11:57:41.838441 [info ]: Loading profiles.yml
+11:57:41.838519 [info ]: Finished loading project [  0.00s]
+11:57:41.842277 [debug]:    Started loading packages
+11:57:41.843693 [debug]:     Loaded [  0.00s] packages
+11:57:41.844252 [info ]: Started parsing
+11:57:41.863572 [info ]: Finished loading project [  0.03s]
+11:57:41.865269 [debug]: Finished parsing models\staging\stg_runs.sql [  0.00s]
+11:57:41.866699 [debug]: Finished parsing models\staging\stg_tournois.sql [  0.00s]
+11:57:41.867396 [info ]: Finished parsing [  0.02s]
+11:57:41.867686 [info ]: Cached model count updated: 2 models (estimate)
+11:57:41.867699 [info ]: Cached model count updated: 2 models (accurate)
+11:57:41.867715 [info ]: Started scheduling
+11:57:41.867739 [info ]: Finished scheduling [  0.00s]
+11:57:41.867746 [debug]: Compilation - 0 nodes selected: {}
+11:57:41.867755 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+11:57:41.867763 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:57:41.867767 [info ]: Started scheduling
+11:57:41.867787 [info ]: Finished scheduling [  0.00s]
+11:57:41.997325 [info ]: Started building task graph
+11:57:41.997356 [info ]: Finished building task graph [  0.00s]
+11:57:41.999801 [info ]: Started scheduling
+11:57:41.999835 [info ]: Finished scheduling [  0.00s]
+11:57:42.001398 [info ]: Cached model count updated: 2 models (accurate)
+11:57:43.518327 [info ]: Started loading project
+11:57:43.518841 [info ]: Loading profiles.yml
+11:57:43.536921 [info ]: Cached model count updated: 2 models (estimate)
+11:57:43.536944 [info ]: Cached model count updated: 2 models (accurate)
+11:57:43.536965 [info ]: Started scheduling
+11:57:43.537000 [info ]: Finished scheduling [  0.00s]
+11:57:43.537010 [debug]: Compilation - 2 nodes selected: {"model.dilemme_prisonnier.stg_runs", "model.dilemme_prisonnier.stg_tournois"}
+11:57:43.697889 [info ]: Started building task graph
+11:57:43.697938 [info ]: Finished building task graph [  0.00s]
+11:57:43.698041 [info ]: Started rendering (2 nodes)
+11:57:43.698058 [info ]: Started model main.stg_tournois
+11:57:43.698072 [debug]: Started rendering model main.stg_tournois
+11:57:43.698094 [info ]: Started model main.stg_runs
+11:57:43.698100 [debug]: Started rendering model main.stg_runs
+11:57:43.698138 [info ]: Finished loading project [  0.18s]
+11:57:43.699252 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_runs at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_runs.sql
+11:57:43.699269 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_tournois at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_tournois.sql
+11:57:43.699349 [debug]: Finished rendering [  0.00s] model main.stg_runs [success]
+11:57:43.699376 [info ]: Started analyzing (2 nodes)
+11:57:43.699414 [debug]: Started analyzing model main.stg_runs
+11:57:43.699443 [debug]: Finished rendering [  0.00s] model main.stg_tournois [success]
+11:57:43.699451 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:57:43.699459 [debug]: Started analyzing model main.stg_tournois
+11:57:43.699594 [debug]: Finished analyzing [  0.00s] model main.stg_runs [success]
+11:57:43.699605 [info ]:  Succeeded [  0.00s] model main.stg_runs (view)
+11:57:43.699870 [debug]: Finished analyzing [  0.00s] model main.stg_tournois [success]
+11:57:43.699885 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:57:43.699891 [info ]:  Succeeded [  0.00s] model main.stg_tournois (view)
+11:57:43.703348 [info ]: Started scheduling
+11:57:43.703398 [info ]: Finished scheduling [  0.00s]
+11:57:43.704215 [info ]: Cached model count updated: 2 models (accurate)
+11:57:47.284891 [info ]: Started loading project
+11:57:47.285411 [info ]: Loading profiles.yml
+11:57:47.287744 [info ]: Started loading project
+11:57:47.288115 [info ]: Loading profiles.yml
+11:57:47.288261 [info ]: Finished loading project [  0.00s]
+11:57:47.292078 [debug]:    Started loading packages
+11:57:47.293563 [debug]:     Loaded [  0.00s] packages
+11:57:47.294151 [info ]: Started parsing
+11:57:47.312629 [info ]: Finished loading project [  0.02s]
+11:57:47.313378 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+11:57:47.314977 [debug]: Finished parsing models\staging\stg_runs.sql [  0.00s]
+11:57:47.316538 [debug]: Finished parsing models\staging\stg_tournois.sql [  0.00s]
+11:57:47.317269 [info ]: Finished parsing [  0.02s]
+11:57:47.317540 [info ]: Cached model count updated: 2 models (estimate)
+11:57:47.317553 [info ]: Cached model count updated: 2 models (accurate)
+11:57:47.317568 [info ]: Started scheduling
+11:57:47.317591 [info ]: Finished scheduling [  0.00s]
+11:57:47.317600 [debug]: Compilation - 0 nodes selected: {}
+11:57:47.317610 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+11:57:47.317617 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:57:47.317623 [info ]: Started scheduling
+11:57:47.317642 [info ]: Finished scheduling [  0.00s]
+11:57:47.457437 [info ]: Started building task graph
+11:57:47.457469 [info ]: Finished building task graph [  0.00s]
+11:57:47.459985 [info ]: Started scheduling
+11:57:47.460023 [info ]: Finished scheduling [  0.00s]
+11:57:47.461661 [info ]: Cached model count updated: 2 models (accurate)
+11:57:48.977078 [info ]: Started loading project
+11:57:48.977574 [info ]: Loading profiles.yml
+11:57:48.993194 [info ]: Cached model count updated: 2 models (estimate)
+11:57:48.993216 [info ]: Cached model count updated: 2 models (accurate)
+11:57:48.993237 [info ]: Started scheduling
+11:57:48.993270 [info ]: Finished scheduling [  0.00s]
+11:57:48.993284 [debug]: Compilation - 2 nodes selected: {"model.dilemme_prisonnier.stg_runs", "model.dilemme_prisonnier.stg_tournois"}
+11:57:49.123550 [info ]: Started building task graph
+11:57:49.123599 [info ]: Finished building task graph [  0.00s]
+11:57:49.123696 [info ]: Started rendering (2 nodes)
+11:57:49.123708 [info ]: Started model main.stg_tournois
+11:57:49.123720 [debug]: Started rendering model main.stg_tournois
+11:57:49.123741 [info ]: Started model main.stg_runs
+11:57:49.123747 [debug]: Started rendering model main.stg_runs
+11:57:49.123776 [info ]: Finished loading project [  0.15s]
+11:57:49.126232 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_tournois at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_tournois.sql
+11:57:49.126382 [debug]: Finished rendering [  0.00s] model main.stg_tournois [success]
+11:57:49.126417 [info ]: Started analyzing (2 nodes)
+11:57:49.126427 [debug]: Started analyzing model main.stg_tournois
+11:57:49.126612 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_runs at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_runs.sql
+11:57:49.126690 [debug]: Finished rendering [  0.00s] model main.stg_runs [success]
+11:57:49.126705 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:57:49.126716 [debug]: Started analyzing model main.stg_runs
+11:57:49.126785 [debug]: Finished analyzing [  0.00s] model main.stg_tournois [success]
+11:57:49.126800 [info ]:  Succeeded [  0.00s] model main.stg_tournois (view)
+11:57:49.126813 [debug]: Finished analyzing [  0.00s] model main.stg_runs [success]
+11:57:49.126821 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+11:57:49.126826 [info ]:  Succeeded [  0.00s] model main.stg_runs (view)
+11:57:49.129410 [info ]: Started scheduling
+11:57:49.129445 [info ]: Finished scheduling [  0.00s]
+11:57:49.130250 [info ]: Cached model count updated: 2 models (accurate)
+11:57:57.982162 [info ]: Started loading project
+11:57:57.982660 [info ]: Loading profiles.yml
+11:57:57.985433 [info ]: Started loading project
+11:57:57.985806 [info ]: Loading profiles.yml
+11:57:57.985831 [info ]: Finished loading project [  0.00s]
+11:57:57.989866 [debug]:    Started loading packages
+11:57:57.991520 [debug]:     Loaded [  0.00s] packages
+11:57:57.992119 [info ]: Started parsing
+11:57:58.011259 [info ]: Finished loading project [  0.03s]
+11:57:58.011773 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+11:57:58.013528 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+11:57:58.014097 [debug]: Finished parsing models\staging\stg_runs.sql [  0.00s]
+11:57:58.015943 [debug]: Finished parsing models\staging\stg_tournois.sql [  0.00s]
+11:57:58.016624 [info ]: Finished parsing [  0.02s]
+11:57:58.016937 [info ]: Cached model count updated: 3 models (estimate)
+11:57:58.016949 [info ]: Cached model count updated: 3 models (accurate)
+11:57:58.016964 [info ]: Started scheduling
+11:57:58.017016 [info ]: Finished scheduling [  0.00s]
+11:57:58.017029 [debug]: Compilation - 0 nodes selected: {}
+11:57:58.017052 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+11:57:58.017066 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:57:58.017077 [info ]: Started scheduling
+11:57:58.017115 [info ]: Finished scheduling [  0.00s]
+11:57:58.146337 [info ]: Started building task graph
+11:57:58.146368 [info ]: Finished building task graph [  0.00s]
+11:57:58.148969 [info ]: Started scheduling
+11:57:58.149004 [info ]: Finished scheduling [  0.00s]
+11:57:58.150664 [info ]: Cached model count updated: 3 models (accurate)
+11:57:59.676040 [info ]: Started loading project
+11:57:59.676542 [info ]: Loading profiles.yml
+11:57:59.691789 [info ]: Cached model count updated: 3 models (estimate)
+11:57:59.691809 [info ]: Cached model count updated: 3 models (accurate)
+11:57:59.691830 [info ]: Started scheduling
+11:57:59.691873 [info ]: Finished scheduling [  0.00s]
+11:57:59.691885 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_runs", "model.dilemme_prisonnier.stg_tournois"}
+11:57:59.813195 [info ]: Started building task graph
+11:57:59.813249 [info ]: Finished building task graph [  0.00s]
+11:57:59.813371 [info ]: Started rendering (3 nodes)
+11:57:59.813386 [info ]: Started model main.mart_tournois_stats
+11:57:59.813394 [debug]: Started rendering model main.mart_tournois_stats
+11:57:59.813413 [info ]: Started model main.stg_tournois
+11:57:59.813417 [debug]: Started rendering model main.stg_tournois
+11:57:59.813424 [info ]: Started model main.stg_runs
+11:57:59.813428 [debug]: Started rendering model main.stg_runs
+11:57:59.813456 [info ]: Finished loading project [  0.14s]
+11:57:59.814477 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+11:57:59.814580 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+11:57:59.814610 [info ]: Started analyzing (3 nodes)
+11:57:59.814618 [debug]: Started analyzing model main.mart_tournois_stats
+11:57:59.817083 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+11:57:59.817106 [info ]:  Succeeded [  0.00s] model main.mart_tournois_stats (table)
+11:57:59.817482 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_runs at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_runs.sql
+11:57:59.817627 [debug]: Finished rendering [  0.00s] model main.stg_runs [success]
+11:57:59.817650 [debug]: Started analyzing model main.stg_runs
+11:57:59.817741 [debug]: Finished analyzing [  0.00s] model main.stg_runs [success]
+11:57:59.817750 [info ]:  Succeeded [  0.00s] model main.stg_runs (view)
+11:57:59.818453 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_tournois at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_tournois.sql
+11:57:59.818554 [debug]: Finished rendering [  0.01s] model main.stg_tournois [success]
+11:57:59.818569 [info ]: Finished rendering [  0.01s] (3 nodes, 0 skipped, 0 errors)
+11:57:59.818581 [debug]: Started analyzing model main.stg_tournois
+11:57:59.818868 [debug]: Finished analyzing [  0.00s] model main.stg_tournois [success]
+11:57:59.818878 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+11:57:59.818884 [info ]:  Succeeded [  0.01s] model main.stg_tournois (view)
+11:57:59.821609 [info ]: Started scheduling
+11:57:59.821646 [info ]: Finished scheduling [  0.00s]
+11:57:59.822495 [info ]: Cached model count updated: 3 models (accurate)
+11:58:01.189126 [info ]: Started loading project
+11:58:01.189660 [info ]: Loading profiles.yml
+11:58:01.192416 [info ]: Started loading project
+11:58:01.192837 [info ]: Loading profiles.yml
+11:58:01.192901 [info ]: Finished loading project [  0.00s]
+11:58:01.196797 [debug]:    Started loading packages
+11:58:01.198339 [debug]:     Loaded [  0.00s] packages
+11:58:01.198901 [info ]: Started parsing
+11:58:01.217551 [info ]: Finished loading project [  0.03s]
+11:58:01.217905 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+11:58:01.219293 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+11:58:01.219862 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+11:58:01.220357 [debug]: Finished parsing models\staging\stg_runs.sql [  0.00s]
+11:58:01.222288 [debug]: Finished parsing models\staging\stg_tournois.sql [  0.00s]
+11:58:01.223018 [info ]: Finished parsing [  0.02s]
+11:58:01.223369 [info ]: Cached model count updated: 4 models (estimate)
+11:58:01.223381 [info ]: Cached model count updated: 4 models (accurate)
+11:58:01.223398 [info ]: Started scheduling
+11:58:01.223420 [info ]: Finished scheduling [  0.00s]
+11:58:01.223429 [debug]: Compilation - 0 nodes selected: {}
+11:58:01.223438 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+11:58:01.223444 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:58:01.223448 [info ]: Started scheduling
+11:58:01.223478 [info ]: Finished scheduling [  0.00s]
+11:58:01.346737 [info ]: Started building task graph
+11:58:01.346767 [info ]: Finished building task graph [  0.00s]
+11:58:01.349248 [info ]: Started scheduling
+11:58:01.349286 [info ]: Finished scheduling [  0.00s]
+11:58:01.350917 [info ]: Cached model count updated: 4 models (accurate)
+11:58:02.869685 [info ]: Started loading project
+11:58:02.870122 [info ]: Loading profiles.yml
+11:58:02.884989 [info ]: Cached model count updated: 4 models (estimate)
+11:58:02.885009 [info ]: Cached model count updated: 4 models (accurate)
+11:58:02.885029 [info ]: Started scheduling
+11:58:02.885072 [info ]: Finished scheduling [  0.00s]
+11:58:02.885086 [debug]: Compilation - 4 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_runs", "model.dilemme_prisonnier.stg_tournois"}
+11:58:03.009039 [info ]: Started building task graph
+11:58:03.009097 [info ]: Finished building task graph [  0.00s]
+11:58:03.009203 [info ]: Started rendering (4 nodes)
+11:58:03.009215 [info ]: Started model main.mart_player_performance
+11:58:03.009222 [debug]: Started rendering model main.mart_player_performance
+11:58:03.009243 [info ]: Started model main.mart_tournois_stats
+11:58:03.009247 [debug]: Started rendering model main.mart_tournois_stats
+11:58:03.009254 [info ]: Started model main.stg_tournois
+11:58:03.009261 [debug]: Started rendering model main.stg_tournois
+11:58:03.009268 [info ]: Started model main.stg_runs
+11:58:03.009272 [debug]: Started rendering model main.stg_runs
+11:58:03.009297 [info ]: Finished loading project [  0.14s]
+11:58:03.012310 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+11:58:03.012322 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+11:58:03.012441 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+11:58:03.012479 [info ]: Started analyzing (4 nodes)
+11:58:03.012491 [debug]: Started analyzing model main.mart_player_performance
+11:58:03.012508 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+11:58:03.012518 [debug]: Started analyzing model main.mart_tournois_stats
+11:58:03.013059 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+11:58:03.013078 [info ]:  Succeeded [  0.00s] model main.mart_player_performance (table)
+11:58:03.013277 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_tournois at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_tournois.sql
+11:58:03.013358 [debug]: Finished rendering [  0.00s] model main.stg_tournois [success]
+11:58:03.013383 [debug]: Started analyzing model main.stg_tournois
+11:58:03.013650 [debug]: Finished analyzing [  0.00s] model main.stg_tournois [success]
+11:58:03.013661 [info ]:  Succeeded [  0.00s] model main.stg_tournois (view)
+11:58:03.013850 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_runs at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_runs.sql
+11:58:03.013912 [debug]: Finished rendering [  0.00s] model main.stg_runs [success]
+11:58:03.013924 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+11:58:03.013934 [debug]: Started analyzing model main.stg_runs
+11:58:03.014005 [debug]: Finished analyzing [  0.00s] model main.stg_runs [success]
+11:58:03.014014 [info ]:  Succeeded [  0.00s] model main.stg_runs (view)
+11:58:03.014931 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+11:58:03.014944 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+11:58:03.014950 [info ]:  Succeeded [  0.01s] model main.mart_tournois_stats (table)
+11:58:03.017654 [info ]: Started scheduling
+11:58:03.017690 [info ]: Finished scheduling [  0.00s]
+11:58:03.018978 [info ]: Cached model count updated: 4 models (accurate)
+11:58:03.858152 [info ]: Started loading project
+11:58:03.858675 [info ]: Loading profiles.yml
+11:58:03.861946 [info ]: Started loading project
+11:58:03.862329 [info ]: Loading profiles.yml
+11:58:03.862404 [info ]: Finished loading project [  0.00s]
+11:58:03.866264 [debug]:    Started loading packages
+11:58:03.868010 [debug]:     Loaded [  0.00s] packages
+11:58:03.868677 [info ]: Started parsing
+11:58:03.889057 [info ]: Finished loading project [  0.03s]
+11:58:03.889524 [debug]: Finished parsing models\marts\schema.yml [  0.00s]
+11:58:03.889803 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+11:58:03.891304 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+11:58:03.891893 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+11:58:03.892917 [debug]: Finished parsing models\staging\stg_runs.sql [  0.00s]
+11:58:03.895168 [debug]: Finished parsing models\staging\stg_tournois.sql [  0.00s]
+11:58:03.895892 [info ]: Finished parsing [  0.03s]
+11:58:03.896238 [info ]: Cached model count updated: 4 models (estimate)
+11:58:03.896250 [info ]: Cached model count updated: 4 models (accurate)
+11:58:03.896267 [info ]: Started scheduling
+11:58:03.896295 [info ]: Finished scheduling [  0.00s]
+11:58:03.896305 [debug]: Compilation - 0 nodes selected: {}
+11:58:03.896315 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+11:58:03.896323 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:58:03.896329 [info ]: Started scheduling
+11:58:03.896358 [info ]: Finished scheduling [  0.00s]
+11:58:04.029341 [info ]: Started building task graph
+11:58:04.029375 [info ]: Finished building task graph [  0.00s]
+11:58:04.032480 [info ]: Started scheduling
+11:58:04.032539 [info ]: Finished scheduling [  0.00s]
+11:58:04.034070 [info ]: Cached model count updated: 4 models (accurate)
+11:58:05.558450 [info ]: Started loading project
+11:58:05.559339 [info ]: Loading profiles.yml
+11:58:05.575860 [info ]: Cached model count updated: 4 models (estimate)
+11:58:05.575881 [info ]: Cached model count updated: 4 models (accurate)
+11:58:05.575901 [info ]: Started scheduling
+11:58:05.575944 [info ]: Finished scheduling [  0.00s]
+11:58:05.575955 [debug]: Compilation - 4 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_runs", "model.dilemme_prisonnier.stg_tournois"}
+11:58:05.698048 [info ]: Started building task graph
+11:58:05.698103 [info ]: Finished building task graph [  0.00s]
+11:58:05.698203 [info ]: Started rendering (4 nodes)
+11:58:05.698217 [info ]: Started model main.mart_player_performance
+11:58:05.698228 [debug]: Started rendering model main.mart_player_performance
+11:58:05.698246 [info ]: Started model main.mart_tournois_stats
+11:58:05.698253 [debug]: Started rendering model main.mart_tournois_stats
+11:58:05.698260 [info ]: Started model main.stg_tournois
+11:58:05.698264 [debug]: Started rendering model main.stg_tournois
+11:58:05.698269 [info ]: Started model main.stg_runs
+11:58:05.698273 [debug]: Started rendering model main.stg_runs
+11:58:05.698302 [info ]: Finished loading project [  0.14s]
+11:58:05.701022 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_runs at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_runs.sql
+11:58:05.701189 [debug]: Finished rendering [  0.00s] model main.stg_runs [success]
+11:58:05.701197 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+11:58:05.701226 [info ]: Started analyzing (4 nodes)
+11:58:05.701237 [debug]: Started analyzing model main.stg_runs
+11:58:05.701378 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+11:58:05.701400 [debug]: Started analyzing model main.mart_player_performance
+11:58:05.701420 [debug]: Finished analyzing [  0.00s] model main.stg_runs [success]
+11:58:05.701430 [info ]:  Succeeded [  0.00s] model main.stg_runs (view)
+11:58:05.701520 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_tournois at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_tournois.sql
+11:58:05.701586 [debug]: Finished rendering [  0.00s] model main.stg_tournois [success]
+11:58:05.701612 [debug]: Started analyzing model main.stg_tournois
+11:58:05.701799 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+11:58:05.701811 [info ]:  Succeeded [  0.00s] model main.mart_player_performance (table)
+11:58:05.701934 [debug]: Finished analyzing [  0.00s] model main.stg_tournois [success]
+11:58:05.701946 [info ]:  Succeeded [  0.00s] model main.stg_tournois (view)
+11:58:05.702654 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+11:58:05.702718 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+11:58:05.702728 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+11:58:05.702737 [debug]: Started analyzing model main.mart_tournois_stats
+11:58:05.704936 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+11:58:05.704946 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+11:58:05.704951 [info ]:  Succeeded [  0.01s] model main.mart_tournois_stats (table)
+11:58:05.707669 [info ]: Started scheduling
+11:58:05.707702 [info ]: Finished scheduling [  0.00s]
+11:58:05.708509 [info ]: Cached model count updated: 4 models (accurate)
+11:59:23.223594 [info ]: Started loading project
+11:59:23.224087 [info ]: Loading profiles.yml
+11:59:23.226624 [info ]: Started loading project
+11:59:23.226966 [info ]: Loading profiles.yml
+11:59:23.227072 [info ]: Finished loading project [  0.00s]
+11:59:23.230775 [debug]:    Started loading packages
+11:59:23.232330 [debug]:     Loaded [  0.00s] packages
+11:59:23.232922 [info ]: Started parsing
+11:59:23.252196 [info ]: Finished loading project [  0.03s]
+11:59:23.252917 [debug]: Finished parsing models\marts\schema.yml [  0.00s]
+11:59:23.253250 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+11:59:23.254747 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+11:59:23.255280 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+11:59:23.255733 [debug]: Finished parsing models\staging\stg_runs.sql [  0.00s]
+11:59:23.256079 [debug]: Finished parsing models\staging\stg_tournois.sql [  0.00s]
+11:59:23.258345 [debug]: Finished parsing models\v_silver.sql [  0.00s]
+11:59:23.259137 [info ]: Finished parsing [  0.03s]
+11:59:23.259511 [info ]: Cached model count updated: 5 models (estimate)
+11:59:23.259524 [info ]: Cached model count updated: 5 models (accurate)
+11:59:23.259544 [info ]: Started scheduling
+11:59:23.259574 [info ]: Finished scheduling [  0.00s]
+11:59:23.259584 [debug]: Compilation - 0 nodes selected: {}
+11:59:23.259593 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+11:59:23.259602 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:59:23.259606 [info ]: Started scheduling
+11:59:23.259639 [info ]: Finished scheduling [  0.00s]
+11:59:23.383568 [info ]: Started building task graph
+11:59:23.383600 [info ]: Finished building task graph [  0.00s]
+11:59:23.386563 [info ]: Started scheduling
+11:59:23.386617 [info ]: Finished scheduling [  0.00s]
+11:59:23.388524 [info ]: Cached model count updated: 5 models (accurate)
+11:59:24.909152 [info ]: Started loading project
+11:59:24.909595 [info ]: Loading profiles.yml
+11:59:24.912154 [info ]: Started loading project
+11:59:24.912500 [info ]: Loading profiles.yml
+11:59:24.912578 [info ]: Finished loading project [  0.00s]
+11:59:24.916193 [debug]:    Started loading packages
+11:59:24.917652 [debug]:     Loaded [  0.00s] packages
+11:59:24.918200 [info ]: Started parsing
+11:59:24.936566 [info ]: Finished loading project [  0.02s]
+11:59:24.936745 [debug]: Finished parsing models\marts\schema.yml [  0.00s]
+11:59:24.937056 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+11:59:24.938755 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+11:59:24.939381 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+11:59:24.939799 [debug]: Finished parsing models\staging\stg_runs.sql [  0.00s]
+11:59:24.940100 [debug]: Finished parsing models\staging\stg_tournois.sql [  0.00s]
+11:59:24.942339 [debug]: Finished parsing models\v_silver.sql [  0.00s]
+11:59:24.943005 [info ]: Finished parsing [  0.02s]
+11:59:24.943358 [info ]: Cached model count updated: 5 models (estimate)
+11:59:24.943369 [info ]: Cached model count updated: 5 models (accurate)
+11:59:24.943384 [info ]: Started scheduling
+11:59:24.943426 [info ]: Finished scheduling [  0.00s]
+11:59:24.943434 [debug]: Compilation - 5 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_runs", "model.dilemme_prisonnier.stg_tournois", "model.dilemme_prisonnier.v_silver"}
+11:59:24.943441 [info ]: Started scheduling
+11:59:24.943500 [info ]: Finished scheduling [  0.00s]
+11:59:25.068554 [info ]: Started building task graph
+11:59:25.068616 [info ]: Finished building task graph [  0.00s]
+11:59:25.075068 [info ]: Waiting for lease on 'target' directory
+11:59:25.305117 [info ]: Loading profiles.yml
+11:59:25.512808 [info ]: Started loading project
+11:59:25.513288 [info ]: Loading profiles.yml
+11:59:25.517217 [debug]:    Started loading packages
+11:59:25.518805 [debug]:     Loaded [  0.00s] packages
+11:59:25.519422 [info ]: Started parsing
+11:59:25.538029 [info ]: Finished loading project [  0.03s]
+11:59:25.538228 [debug]: Finished parsing models\marts\schema.yml [  0.00s]
+11:59:25.538501 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+11:59:25.539882 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+11:59:25.540479 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+11:59:25.540888 [debug]: Finished parsing models\staging\stg_runs.sql [  0.00s]
+11:59:25.541197 [debug]: Finished parsing models\staging\stg_tournois.sql [  0.00s]
+11:59:25.543443 [debug]: Finished parsing models\v_silver.sql [  0.00s]
+11:59:25.544174 [info ]: Finished parsing [  0.02s]
+11:59:25.544537 [info ]: Cached model count updated: 5 models (estimate)
+11:59:25.544549 [info ]: Cached model count updated: 5 models (accurate)
+11:59:25.544564 [info ]: Started scheduling
+11:59:25.544590 [info ]: Finished scheduling [  0.00s]
+11:59:25.544599 [debug]: Compilation - 0 nodes selected: {}
+11:59:25.544608 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+11:59:25.544614 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+11:59:25.544620 [info ]: Started scheduling
+11:59:25.544652 [info ]: Finished scheduling [  0.00s]
+11:59:25.670987 [info ]: Started building task graph
+11:59:25.671019 [info ]: Finished building task graph [  0.00s]
+11:59:25.673835 [info ]: Started scheduling
+11:59:25.673873 [info ]: Finished scheduling [  0.00s]
+11:59:25.674179 [info ]: Cached model count updated: 5 models (accurate)
+11:59:27.190053 [info ]: Cached model count updated: 5 models (accurate)
+11:59:27.190502 [info ]: Waiting for lease on 'target' directory
+11:59:27.733808 [info ]: Started loading project
+11:59:27.734321 [info ]: Loading profiles.yml
+11:59:27.750174 [info ]: Cached model count updated: 5 models (estimate)
+11:59:27.750193 [info ]: Cached model count updated: 5 models (accurate)
+11:59:27.750217 [info ]: Started scheduling
+11:59:27.750262 [info ]: Finished scheduling [  0.00s]
+11:59:27.750272 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.stg_runs"}
+11:59:27.882458 [info ]: Started building task graph
+11:59:27.882507 [info ]: Finished building task graph [  0.00s]
+11:59:27.882612 [info ]: Started rendering (1 nodes)
+11:59:27.882626 [info ]: Started model main.stg_runs
+11:59:27.882635 [debug]: Started rendering model main.stg_runs
+11:59:27.882673 [info ]: Finished loading project [  0.15s]
+11:59:27.883592 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_runs at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_runs.sql
+11:59:27.883690 [debug]: Finished rendering [  0.00s] model main.stg_runs [success]
+11:59:27.883704 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:27.883719 [info ]: Started analyzing (1 nodes)
+11:59:27.883725 [debug]: Started analyzing model main.stg_runs
+11:59:27.883907 [debug]: Finished analyzing [  0.00s] model main.stg_runs [success]
+11:59:27.883924 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:27.883931 [info ]:  Succeeded [  0.00s] model main.stg_runs (view)
+11:59:27.886671 [info ]: Started scheduling
+11:59:27.886705 [info ]: Finished scheduling [  0.00s]
+11:59:27.887076 [info ]: Cached model count updated: 5 models (accurate)
+11:59:28.055973 [info ]: Waiting for lease on 'target' directory
+11:59:28.280292 [info ]: Started loading project
+11:59:28.280788 [info ]: Loading profiles.yml
+11:59:28.297828 [info ]: Cached model count updated: 5 models (estimate)
+11:59:28.297851 [info ]: Cached model count updated: 5 models (accurate)
+11:59:28.297879 [info ]: Started scheduling
+11:59:28.297934 [info ]: Finished scheduling [  0.00s]
+11:59:28.297949 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.stg_tournois"}
+11:59:28.437483 [info ]: Started building task graph
+11:59:28.437529 [info ]: Finished building task graph [  0.00s]
+11:59:28.437644 [info ]: Started rendering (1 nodes)
+11:59:28.437660 [info ]: Started model main.stg_tournois
+11:59:28.437670 [debug]: Started rendering model main.stg_tournois
+11:59:28.437725 [info ]: Finished loading project [  0.16s]
+11:59:28.438922 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_tournois at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_tournois.sql
+11:59:28.439017 [debug]: Finished rendering [  0.00s] model main.stg_tournois [success]
+11:59:28.439033 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:28.439048 [info ]: Started analyzing (1 nodes)
+11:59:28.439055 [debug]: Started analyzing model main.stg_tournois
+11:59:28.439482 [debug]: Finished analyzing [  0.00s] model main.stg_tournois [success]
+11:59:28.439493 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:28.439499 [info ]:  Succeeded [  0.00s] model main.stg_tournois (view)
+11:59:28.442354 [info ]: Started scheduling
+11:59:28.442392 [info ]: Finished scheduling [  0.00s]
+11:59:28.442808 [info ]: Cached model count updated: 5 models (accurate)
+11:59:29.550180 [info ]: Started loading project
+11:59:29.550703 [info ]: Loading profiles.yml
+11:59:29.553196 [info ]: Started loading project
+11:59:29.553630 [info ]: Loading profiles.yml
+11:59:29.553667 [info ]: Finished loading project [  0.00s]
+11:59:29.558072 [debug]:    Started loading packages
+11:59:29.559481 [debug]:     Loaded [  0.00s] packages
+11:59:29.560118 [info ]: Started parsing
+11:59:29.590093 [info ]: Finished loading project [  0.04s]
+11:59:29.593213 [debug]: Finished parsing models\v_silver.sql [  0.00s]
+11:59:29.594124 [info ]: Finished parsing [  0.03s]
+11:59:29.594336 [info ]: Cached model count updated: 1 models (estimate)
+11:59:29.594350 [info ]: Cached model count updated: 1 models (accurate)
+11:59:29.594370 [info ]: Started scheduling
+11:59:29.594410 [info ]: Finished scheduling [  0.00s]
+11:59:29.594419 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.v_silver"}
+11:59:29.594429 [info ]: Started scheduling
+11:59:29.594440 [info ]: Finished scheduling [  0.00s]
+11:59:29.736519 [info ]: Started building task graph
+11:59:29.736564 [info ]: Finished building task graph [  0.00s]
+11:59:29.736662 [info ]: Started rendering (1 nodes)
+11:59:29.736678 [info ]: Started model main.v_silver
+11:59:29.736689 [debug]: Started rendering model main.v_silver
+11:59:29.737710 [debug]: Compiled SQL for node model.dilemme_prisonnier.v_silver at target\.lsp\compiled\dilemme_prisonnier\models\v_silver.sql
+11:59:29.737800 [debug]: Finished rendering [  0.00s] model main.v_silver [success]
+11:59:29.737819 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:29.737835 [info ]: Started analyzing (1 nodes)
+11:59:29.737842 [debug]: Started analyzing model main.v_silver
+11:59:29.741018 [debug]: Finished analyzing [  0.00s] model main.v_silver [success]
+11:59:29.741041 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:29.741048 [info ]:  Succeeded [  0.00s] model main.v_silver (view)
+11:59:29.743409 [info ]: Started scheduling
+11:59:29.743445 [info ]: Finished scheduling [  0.00s]
+11:59:29.743760 [info ]: Cached model count updated: 1 models (accurate)
+11:59:30.162978 [info ]: Started loading project
+11:59:30.163496 [info ]: Loading profiles.yml
+11:59:30.179982 [info ]: Finished loading project [  0.02s]
+11:59:30.180128 [info ]: Cached model count updated: 1 models (accurate)
+11:59:31.702888 [info ]: Started loading project
+11:59:31.703362 [info ]: Loading profiles.yml
+11:59:31.717497 [info ]: Cached model count updated: 1 models (estimate)
+11:59:31.717517 [info ]: Cached model count updated: 1 models (accurate)
+11:59:31.717534 [info ]: Started scheduling
+11:59:31.717564 [info ]: Finished scheduling [  0.00s]
+11:59:31.717575 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.v_silver"}
+11:59:31.843948 [info ]: Started building task graph
+11:59:31.843993 [info ]: Finished building task graph [  0.00s]
+11:59:31.844100 [info ]: Started rendering (1 nodes)
+11:59:31.844117 [info ]: Started model main.v_silver
+11:59:31.844128 [debug]: Started rendering model main.v_silver
+11:59:31.844169 [info ]: Finished loading project [  0.14s]
+11:59:31.844509 [debug]: Compiled SQL for node model.dilemme_prisonnier.v_silver at target\.lsp\compiled\dilemme_prisonnier\models\v_silver.sql
+11:59:31.844593 [debug]: Finished rendering [  0.00s] model main.v_silver [success]
+11:59:31.844609 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:31.844622 [info ]: Started analyzing (1 nodes)
+11:59:31.844631 [debug]: Started analyzing model main.v_silver
+11:59:31.844748 [debug]: Finished analyzing [  0.00s] model main.v_silver [success]
+11:59:31.844757 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:31.844762 [info ]:  Succeeded [-------] model main.v_silver (view)
+11:59:31.847519 [info ]: Started scheduling
+11:59:31.847557 [info ]: Finished scheduling [  0.00s]
+11:59:31.848683 [info ]: Cached model count updated: 1 models (accurate)
+11:59:36.469607 [info ]: Started loading project
+11:59:36.470186 [info ]: Loading profiles.yml
+11:59:36.479101 [info ]: Started parsing
+11:59:36.492725 [info ]: Finished loading project [  0.02s]
+11:59:36.495050 [debug]: Finished parsing models\v_silver.sql [  0.00s]
+11:59:36.495512 [info ]: Finished parsing [  0.02s]
+11:59:36.497537 [info ]: Cached model count updated: 1 models (estimate)
+11:59:36.497552 [info ]: Cached model count updated: 1 models (accurate)
+11:59:36.497571 [info ]: Started scheduling
+11:59:36.497605 [info ]: Finished scheduling [  0.00s]
+11:59:36.497617 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.v_silver"}
+11:59:36.625578 [info ]: Started building task graph
+11:59:36.625621 [info ]: Finished building task graph [  0.00s]
+11:59:36.625729 [info ]: Started rendering (1 nodes)
+11:59:36.625746 [info ]: Started model main.v_silver
+11:59:36.625755 [debug]: Started rendering model main.v_silver
+11:59:36.626666 [debug]: Compiled SQL for node model.dilemme_prisonnier.v_silver at target\.lsp\compiled\dilemme_prisonnier\models\v_silver.sql
+11:59:36.626755 [debug]: Finished rendering [  0.00s] model main.v_silver [success]
+11:59:36.626773 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:36.626787 [info ]: Started analyzing (1 nodes)
+11:59:36.626796 [debug]: Started analyzing model main.v_silver
+11:59:36.626923 [debug]: Finished analyzing [  0.00s] model main.v_silver [success]
+11:59:36.626932 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:36.626938 [info ]:  Succeeded [-------] model main.v_silver (view)
+11:59:36.629252 [info ]: Started scheduling
+11:59:36.629299 [info ]: Finished scheduling [  0.00s]
+11:59:36.631076 [info ]: Cached model count updated: 1 models (accurate)
+11:59:38.144411 [info ]: Started loading project
+11:59:38.144879 [info ]: Loading profiles.yml
+11:59:38.159805 [info ]: Cached model count updated: 1 models (estimate)
+11:59:38.159828 [info ]: Cached model count updated: 1 models (accurate)
+11:59:38.159849 [info ]: Started scheduling
+11:59:38.159887 [info ]: Finished scheduling [  0.00s]
+11:59:38.159899 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.v_silver"}
+11:59:38.284815 [info ]: Started building task graph
+11:59:38.284858 [info ]: Finished building task graph [  0.00s]
+11:59:38.284952 [info ]: Started rendering (1 nodes)
+11:59:38.284971 [info ]: Started model main.v_silver
+11:59:38.284979 [debug]: Started rendering model main.v_silver
+11:59:38.285016 [info ]: Finished loading project [  0.14s]
+11:59:38.285355 [debug]: Compiled SQL for node model.dilemme_prisonnier.v_silver at target\.lsp\compiled\dilemme_prisonnier\models\v_silver.sql
+11:59:38.285448 [debug]: Finished rendering [  0.00s] model main.v_silver [success]
+11:59:38.285462 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:38.285474 [info ]: Started analyzing (1 nodes)
+11:59:38.285479 [debug]: Started analyzing model main.v_silver
+11:59:38.285612 [debug]: Finished analyzing [  0.00s] model main.v_silver [success]
+11:59:38.285625 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:38.285630 [info ]:  Succeeded [-------] model main.v_silver (view)
+11:59:38.288143 [info ]: Started scheduling
+11:59:38.288173 [info ]: Finished scheduling [  0.00s]
+11:59:38.289019 [info ]: Cached model count updated: 1 models (accurate)
+11:59:39.803096 [info ]: Started loading project
+11:59:39.803515 [info ]: Loading profiles.yml
+11:59:39.817981 [info ]: Cached model count updated: 1 models (estimate)
+11:59:39.818002 [info ]: Cached model count updated: 1 models (accurate)
+11:59:39.818018 [info ]: Started scheduling
+11:59:39.818047 [info ]: Finished scheduling [  0.00s]
+11:59:39.818058 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.v_silver"}
+11:59:39.950976 [info ]: Started building task graph
+11:59:39.951019 [info ]: Finished building task graph [  0.00s]
+11:59:39.951122 [info ]: Started rendering (1 nodes)
+11:59:39.951136 [info ]: Started model main.v_silver
+11:59:39.951144 [debug]: Started rendering model main.v_silver
+11:59:39.951182 [info ]: Finished loading project [  0.15s]
+11:59:39.951480 [debug]: Compiled SQL for node model.dilemme_prisonnier.v_silver at target\.lsp\compiled\dilemme_prisonnier\models\v_silver.sql
+11:59:39.951556 [debug]: Finished rendering [  0.00s] model main.v_silver [success]
+11:59:39.951569 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:39.951581 [info ]: Started analyzing (1 nodes)
+11:59:39.951587 [debug]: Started analyzing model main.v_silver
+11:59:39.951706 [debug]: Finished analyzing [  0.00s] model main.v_silver [success]
+11:59:39.951733 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+11:59:39.951738 [info ]:  Succeeded [-------] model main.v_silver (view)
+11:59:39.954556 [info ]: Started scheduling
+11:59:39.954591 [info ]: Finished scheduling [  0.00s]
+11:59:39.955411 [info ]: Cached model count updated: 1 models (accurate)
+12:00:12.794057 [info ]: Started loading project
+12:00:12.794531 [info ]: Loading profiles.yml
+12:00:12.809336 [info ]: Finished loading project [  0.02s]
+12:00:12.809414 [info ]: Cached model count updated: 1 models (accurate)
+12:00:14.341003 [info ]: Started loading project
+12:00:14.341468 [info ]: Loading profiles.yml
+12:00:14.354163 [info ]: Cached model count updated: 1 models (estimate)
+12:00:14.354186 [info ]: Cached model count updated: 1 models (accurate)
+12:00:14.354203 [info ]: Started scheduling
+12:00:14.354234 [info ]: Finished scheduling [  0.00s]
+12:00:14.354246 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.v_silver"}
+12:00:14.477095 [info ]: Started building task graph
+12:00:14.477138 [info ]: Finished building task graph [  0.00s]
+12:00:14.477244 [info ]: Started rendering (1 nodes)
+12:00:14.477262 [info ]: Started model main.v_silver
+12:00:14.477271 [debug]: Started rendering model main.v_silver
+12:00:14.477313 [info ]: Finished loading project [  0.14s]
+12:00:14.477957 [debug]: Compiled SQL for node model.dilemme_prisonnier.v_silver at target\.lsp\compiled\dilemme_prisonnier\models\v_silver.sql
+12:00:14.478025 [debug]: Finished rendering [  0.00s] model main.v_silver [success]
+12:00:14.478040 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:00:14.478054 [info ]: Started analyzing (1 nodes)
+12:00:14.478063 [debug]: Started analyzing model main.v_silver
+12:00:14.478195 [debug]: Finished analyzing [  0.00s] model main.v_silver [success]
+12:00:14.478202 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:00:14.478240 [info ]:  Succeeded [-------] model main.v_silver (view)
+12:00:14.480866 [info ]: Started scheduling
+12:00:14.480906 [info ]: Finished scheduling [  0.00s]
+12:00:14.481835 [info ]: Cached model count updated: 1 models (accurate)
+12:00:19.232361 [info ]: Started loading project
+12:00:19.232935 [info ]: Loading profiles.yml
+12:00:19.246744 [info ]: Finished loading project [  0.01s]
+12:00:19.246890 [info ]: Cached model count updated: 1 models (accurate)
+12:00:20.774357 [info ]: Started loading project
+12:00:20.774850 [info ]: Loading profiles.yml
+12:00:20.788347 [info ]: Cached model count updated: 1 models (estimate)
+12:00:20.788368 [info ]: Cached model count updated: 1 models (accurate)
+12:00:20.788386 [info ]: Started scheduling
+12:00:20.788416 [info ]: Finished scheduling [  0.00s]
+12:00:20.788428 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.v_silver"}
+12:00:20.924063 [info ]: Started building task graph
+12:00:20.924105 [info ]: Finished building task graph [  0.00s]
+12:00:20.924207 [info ]: Started rendering (1 nodes)
+12:00:20.924223 [info ]: Started model main.v_silver
+12:00:20.924232 [debug]: Started rendering model main.v_silver
+12:00:20.924270 [info ]: Finished loading project [  0.15s]
+12:00:20.924583 [debug]: Compiled SQL for node model.dilemme_prisonnier.v_silver at target\.lsp\compiled\dilemme_prisonnier\models\v_silver.sql
+12:00:20.924671 [debug]: Finished rendering [  0.00s] model main.v_silver [success]
+12:00:20.924688 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:00:20.924703 [info ]: Started analyzing (1 nodes)
+12:00:20.924709 [debug]: Started analyzing model main.v_silver
+12:00:20.924828 [debug]: Finished analyzing [  0.00s] model main.v_silver [success]
+12:00:20.924836 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:00:20.924841 [info ]:  Succeeded [-------] model main.v_silver (view)
+12:00:20.927456 [info ]: Started scheduling
+12:00:20.927490 [info ]: Finished scheduling [  0.00s]
+12:00:20.928335 [info ]: Cached model count updated: 1 models (accurate)
+12:00:22.491858 [info ]: Started loading project
+12:00:22.492438 [info ]: Loading profiles.yml
+12:00:22.494928 [info ]: Started loading project
+12:00:22.495339 [info ]: Loading profiles.yml
+12:00:22.495383 [info ]: Finished loading project [  0.00s]
+12:00:22.500529 [debug]:    Started loading packages
+12:00:22.501995 [debug]:     Loaded [  0.00s] packages
+12:00:22.502572 [info ]: Started parsing
+12:00:22.522601 [info ]: Finished loading project [  0.03s]
+12:00:22.524757 [debug]: Finished parsing models\Stagging\v_silver.sql [  0.00s]
+12:00:22.525547 [info ]: Finished parsing [  0.02s]
+12:00:22.525838 [info ]: Cached model count updated: 1 models (estimate)
+12:00:22.525853 [info ]: Cached model count updated: 1 models (accurate)
+12:00:22.525870 [info ]: Started scheduling
+12:00:22.525898 [info ]: Finished scheduling [  0.00s]
+12:00:22.525908 [debug]: Compilation - 0 nodes selected: {}
+12:00:22.525918 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:00:22.525925 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:00:22.525930 [info ]: Started scheduling
+12:00:22.525946 [info ]: Finished scheduling [  0.00s]
+12:00:22.670287 [info ]: Started building task graph
+12:00:22.670319 [info ]: Finished building task graph [  0.00s]
+12:00:22.672860 [info ]: Started scheduling
+12:00:22.672907 [info ]: Finished scheduling [  0.00s]
+12:00:22.675456 [info ]: Cached model count updated: 1 models (accurate)
+12:00:24.199022 [info ]: Started loading project
+12:00:24.199478 [info ]: Loading profiles.yml
+12:00:24.213843 [info ]: Cached model count updated: 1 models (estimate)
+12:00:24.213865 [info ]: Cached model count updated: 1 models (accurate)
+12:00:24.213883 [info ]: Started scheduling
+12:00:24.213917 [info ]: Finished scheduling [  0.00s]
+12:00:24.213931 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.v_silver"}
+12:00:24.342376 [info ]: Started building task graph
+12:00:24.342415 [info ]: Finished building task graph [  0.00s]
+12:00:24.342517 [info ]: Started rendering (1 nodes)
+12:00:24.342536 [info ]: Started model main.v_silver
+12:00:24.342546 [debug]: Started rendering model main.v_silver
+12:00:24.342708 [info ]: Finished loading project [  0.14s]
+12:00:24.343774 [debug]: Compiled SQL for node model.dilemme_prisonnier.v_silver at target\.lsp\compiled\dilemme_prisonnier\models\Stagging\v_silver.sql
+12:00:24.343855 [debug]: Finished rendering [  0.00s] model main.v_silver [success]
+12:00:24.343869 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:00:24.343884 [info ]: Started analyzing (1 nodes)
+12:00:24.343890 [debug]: Started analyzing model main.v_silver
+12:00:24.344009 [debug]: Finished analyzing [  0.00s] model main.v_silver [success]
+12:00:24.344018 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:00:24.344023 [info ]:  Succeeded [  0.00s] model main.v_silver (view)
+12:00:24.346742 [info ]: Started scheduling
+12:00:24.346768 [info ]: Finished scheduling [  0.00s]
+12:00:24.347566 [info ]: Cached model count updated: 1 models (accurate)
+12:00:42.521241 [info ]: Started loading project
+12:00:42.521808 [info ]: Loading profiles.yml
+12:00:42.524236 [info ]: Started loading project
+12:00:42.524575 [info ]: Loading profiles.yml
+12:00:42.524645 [info ]: Finished loading project [  0.00s]
+12:00:42.528448 [debug]:    Started loading packages
+12:00:42.529889 [debug]:     Loaded [  0.00s] packages
+12:00:42.530427 [info ]: Started parsing
+12:00:42.549822 [info ]: Finished loading project [  0.03s]
+12:00:42.551987 [debug]: Finished parsing models\Stagging\stg_parquets.sql [  0.00s]
+12:00:42.552613 [info ]: Finished parsing [  0.02s]
+12:00:42.552873 [info ]: Cached model count updated: 1 models (estimate)
+12:00:42.552887 [info ]: Cached model count updated: 1 models (accurate)
+12:00:42.552899 [info ]: Started scheduling
+12:00:42.552922 [info ]: Finished scheduling [  0.00s]
+12:00:42.552929 [debug]: Compilation - 0 nodes selected: {}
+12:00:42.552938 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:00:42.552945 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:00:42.552950 [info ]: Started scheduling
+12:00:42.552964 [info ]: Finished scheduling [  0.00s]
+12:00:42.674517 [info ]: Started building task graph
+12:00:42.674546 [info ]: Finished building task graph [  0.00s]
+12:00:42.676234 [info ]: Started scheduling
+12:00:42.676268 [info ]: Finished scheduling [  0.00s]
+12:00:42.678577 [info ]: Cached model count updated: 1 models (accurate)
+12:00:44.191986 [info ]: Started loading project
+12:00:44.192495 [info ]: Loading profiles.yml
+12:00:44.209829 [info ]: Cached model count updated: 1 models (estimate)
+12:00:44.209852 [info ]: Cached model count updated: 1 models (accurate)
+12:00:44.209872 [info ]: Started scheduling
+12:00:44.209902 [info ]: Finished scheduling [  0.00s]
+12:00:44.209916 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.stg_parquets"}
+12:00:44.344072 [info ]: Started building task graph
+12:00:44.344113 [info ]: Finished building task graph [  0.00s]
+12:00:44.344216 [info ]: Started rendering (1 nodes)
+12:00:44.344233 [info ]: Started model main.stg_parquets
+12:00:44.344245 [debug]: Started rendering model main.stg_parquets
+12:00:44.344296 [info ]: Finished loading project [  0.15s]
+12:00:44.345254 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\Stagging\stg_parquets.sql
+12:00:44.345338 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:00:44.345351 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:00:44.345366 [info ]: Started analyzing (1 nodes)
+12:00:44.345372 [debug]: Started analyzing model main.stg_parquets
+12:00:44.345488 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:00:44.345495 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:00:44.345500 [info ]:  Succeeded [  0.00s] model main.stg_parquets (view)
+12:00:44.347975 [info ]: Started scheduling
+12:00:44.348004 [info ]: Finished scheduling [  0.00s]
+12:00:44.348820 [info ]: Cached model count updated: 1 models (accurate)
+12:01:01.305660 [info ]: Started loading project
+12:01:01.306149 [info ]: Loading profiles.yml
+12:01:01.308591 [info ]: Started loading project
+12:01:01.308962 [info ]: Loading profiles.yml
+12:01:01.309002 [info ]: Finished loading project [  0.00s]
+12:01:01.313131 [debug]:    Started loading packages
+12:01:01.314530 [debug]:     Loaded [  0.00s] packages
+12:01:01.315160 [info ]: Started parsing
+12:01:01.334373 [info ]: Finished loading project [  0.03s]
+12:01:01.336335 [debug]: Finished parsing models\staging\stg_parquets.sql [  0.00s]
+12:01:01.337029 [info ]: Finished parsing [  0.02s]
+12:01:01.337275 [info ]: Cached model count updated: 1 models (estimate)
+12:01:01.337287 [info ]: Cached model count updated: 1 models (accurate)
+12:01:01.337301 [info ]: Started scheduling
+12:01:01.337324 [info ]: Finished scheduling [  0.00s]
+12:01:01.337334 [debug]: Compilation - 0 nodes selected: {}
+12:01:01.337343 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:01:01.337352 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:01:01.337358 [info ]: Started scheduling
+12:01:01.337373 [info ]: Finished scheduling [  0.00s]
+12:01:01.474602 [info ]: Started building task graph
+12:01:01.474636 [info ]: Finished building task graph [  0.00s]
+12:01:01.476580 [info ]: Started scheduling
+12:01:01.476616 [info ]: Finished scheduling [  0.00s]
+12:01:01.478122 [info ]: Cached model count updated: 1 models (accurate)
+12:01:03.004877 [info ]: Started loading project
+12:01:03.005518 [info ]: Loading profiles.yml
+12:01:03.019284 [info ]: Cached model count updated: 1 models (estimate)
+12:01:03.019304 [info ]: Cached model count updated: 1 models (accurate)
+12:01:03.019322 [info ]: Started scheduling
+12:01:03.019354 [info ]: Finished scheduling [  0.00s]
+12:01:03.019368 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.stg_parquets"}
+12:01:03.149190 [info ]: Started building task graph
+12:01:03.149232 [info ]: Finished building task graph [  0.00s]
+12:01:03.149332 [info ]: Started rendering (1 nodes)
+12:01:03.149362 [info ]: Started model main.stg_parquets
+12:01:03.149374 [debug]: Started rendering model main.stg_parquets
+12:01:03.149423 [info ]: Finished loading project [  0.14s]
+12:01:03.152208 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:01:03.152297 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:01:03.152314 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:01:03.152329 [info ]: Started analyzing (1 nodes)
+12:01:03.152337 [debug]: Started analyzing model main.stg_parquets
+12:01:03.152495 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:01:03.152508 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:01:03.152514 [info ]:  Succeeded [  0.00s] model main.stg_parquets (view)
+12:01:03.154456 [info ]: Started scheduling
+12:01:03.154486 [info ]: Finished scheduling [  0.00s]
+12:01:03.155268 [info ]: Cached model count updated: 1 models (accurate)
+12:01:08.535850 [info ]: Started loading project
+12:01:08.536316 [info ]: Loading profiles.yml
+12:01:08.539085 [info ]: Started parsing
+12:01:08.550452 [info ]: Finished loading project [  0.01s]
+12:01:08.552758 [debug]: Finished parsing models\staging\stg_parquets.sql [  0.00s]
+12:01:08.553353 [info ]: Finished parsing [  0.01s]
+12:01:08.554189 [info ]: Cached model count updated: 1 models (estimate)
+12:01:08.554202 [info ]: Cached model count updated: 1 models (accurate)
+12:01:08.554219 [info ]: Started scheduling
+12:01:08.554251 [info ]: Finished scheduling [  0.00s]
+12:01:08.554259 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.stg_parquets"}
+12:01:08.680456 [info ]: Started building task graph
+12:01:08.680499 [info ]: Finished building task graph [  0.00s]
+12:01:08.680600 [info ]: Started rendering (1 nodes)
+12:01:08.680612 [info ]: Started model main.stg_parquets
+12:01:08.680624 [debug]: Started rendering model main.stg_parquets
+12:01:08.681538 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:01:08.681619 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:01:08.681636 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:01:08.681650 [info ]: Started analyzing (1 nodes)
+12:01:08.681658 [debug]: Started analyzing model main.stg_parquets
+12:01:08.681777 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:01:08.681784 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:01:08.681789 [info ]:  Succeeded [-------] model main.stg_parquets (view)
+12:01:08.684233 [info ]: Started scheduling
+12:01:08.684279 [info ]: Finished scheduling [  0.00s]
+12:01:08.684850 [info ]: Cached model count updated: 1 models (accurate)
+12:01:11.226450 [info ]: Started loading project
+12:01:11.226964 [info ]: Loading profiles.yml
+12:01:11.241979 [info ]: Cached model count updated: 1 models (estimate)
+12:01:11.242004 [info ]: Cached model count updated: 1 models (accurate)
+12:01:11.242028 [info ]: Started scheduling
+12:01:11.242068 [info ]: Finished scheduling [  0.00s]
+12:01:11.242080 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.stg_parquets"}
+12:01:11.368794 [info ]: Started building task graph
+12:01:11.368840 [info ]: Finished building task graph [  0.00s]
+12:01:11.368954 [info ]: Started rendering (1 nodes)
+12:01:11.368972 [info ]: Started model main.stg_parquets
+12:01:11.368982 [debug]: Started rendering model main.stg_parquets
+12:01:11.369023 [info ]: Finished loading project [  0.14s]
+12:01:11.369356 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:01:11.369434 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:01:11.369447 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:01:11.369461 [info ]: Started analyzing (1 nodes)
+12:01:11.369467 [debug]: Started analyzing model main.stg_parquets
+12:01:11.369593 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:01:11.369601 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:01:11.369606 [info ]:  Succeeded [-------] model main.stg_parquets (view)
+12:01:11.371515 [info ]: Started scheduling
+12:01:11.371547 [info ]: Finished scheduling [  0.00s]
+12:01:11.372424 [info ]: Cached model count updated: 1 models (accurate)
+12:01:12.899344 [info ]: Started loading project
+12:01:12.899809 [info ]: Loading profiles.yml
+12:01:12.913157 [info ]: Cached model count updated: 1 models (estimate)
+12:01:12.913180 [info ]: Cached model count updated: 1 models (accurate)
+12:01:12.913236 [info ]: Started scheduling
+12:01:12.913273 [info ]: Finished scheduling [  0.00s]
+12:01:12.913287 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.stg_parquets"}
+12:01:13.033352 [info ]: Started building task graph
+12:01:13.033395 [info ]: Finished building task graph [  0.00s]
+12:01:13.033491 [info ]: Started rendering (1 nodes)
+12:01:13.033502 [info ]: Started model main.stg_parquets
+12:01:13.033510 [debug]: Started rendering model main.stg_parquets
+12:01:13.033552 [info ]: Finished loading project [  0.13s]
+12:01:13.033889 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:01:13.033955 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:01:13.033966 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:01:13.033989 [info ]: Started analyzing (1 nodes)
+12:01:13.033997 [debug]: Started analyzing model main.stg_parquets
+12:01:13.034118 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:01:13.034127 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:01:13.034131 [info ]:  Succeeded [-------] model main.stg_parquets (view)
+12:01:13.036016 [info ]: Started scheduling
+12:01:13.036047 [info ]: Finished scheduling [  0.00s]
+12:01:13.036904 [info ]: Cached model count updated: 1 models (accurate)
+12:02:27.034845 [info ]: Started loading project
+12:02:27.035592 [info ]: Loading profiles.yml
+12:02:27.038194 [info ]: Started loading project
+12:02:27.038607 [info ]: Loading profiles.yml
+12:02:27.038685 [info ]: Finished loading project [  0.00s]
+12:02:27.043080 [debug]:    Started loading packages
+12:02:27.044628 [debug]:     Loaded [  0.00s] packages
+12:02:27.045280 [info ]: Started parsing
+12:02:27.064554 [info ]: Finished loading project [  0.03s]
+12:02:27.065190 [debug]: Finished parsing models\schema.yml [  0.00s]
+12:02:27.066973 [warn ]: dbt1089: Unused schema.yml entry for model 'v_silver'
+  --> models\schema.yml
+12:02:27.066992 [debug]: Finished parsing models\staging\stg_parquets.sql [  0.00s]
+12:02:27.068276 [info ]: Finished parsing [  0.02s]
+12:02:27.068599 [info ]: Cached model count updated: 1 models (estimate)
+12:02:27.068615 [info ]: Cached model count updated: 1 models (accurate)
+12:02:27.068634 [info ]: Started scheduling
+12:02:27.068667 [info ]: Finished scheduling [  0.00s]
+12:02:27.068678 [debug]: Compilation - 0 nodes selected: {}
+12:02:27.068688 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:02:27.068695 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:02:27.068701 [info ]: Started scheduling
+12:02:27.068718 [info ]: Finished scheduling [  0.00s]
+12:02:27.226171 [info ]: Started building task graph
+12:02:27.226210 [info ]: Finished building task graph [  0.00s]
+12:02:27.228427 [info ]: Started scheduling
+12:02:27.228474 [info ]: Finished scheduling [  0.00s]
+12:02:27.230235 [info ]: Cached model count updated: 1 models (accurate)
+12:02:28.751172 [info ]: Started loading project
+12:02:28.751644 [info ]: Loading profiles.yml
+12:02:28.765703 [info ]: Cached model count updated: 1 models (estimate)
+12:02:28.765726 [info ]: Cached model count updated: 1 models (accurate)
+12:02:28.765746 [info ]: Started scheduling
+12:02:28.765777 [info ]: Finished scheduling [  0.00s]
+12:02:28.765792 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.stg_parquets"}
+12:02:28.898717 [info ]: Started building task graph
+12:02:28.898765 [info ]: Finished building task graph [  0.00s]
+12:02:28.898881 [info ]: Started rendering (1 nodes)
+12:02:28.898899 [info ]: Started model main.stg_parquets
+12:02:28.898910 [debug]: Started rendering model main.stg_parquets
+12:02:28.898953 [info ]: Finished loading project [  0.15s]
+12:02:28.899967 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:02:28.900073 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:02:28.900084 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:02:28.900097 [info ]: Started analyzing (1 nodes)
+12:02:28.900113 [debug]: Started analyzing model main.stg_parquets
+12:02:28.900255 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:02:28.900264 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+12:02:28.900269 [info ]:  Succeeded [  0.00s] model main.stg_parquets (view)
+12:02:28.902473 [info ]: Started scheduling
+12:02:28.902512 [info ]: Finished scheduling [  0.00s]
+12:02:28.903324 [info ]: Cached model count updated: 1 models (accurate)
+12:02:37.346476 [info ]: Started loading project
+12:02:37.346981 [info ]: Loading profiles.yml
+12:02:37.349324 [info ]: Started loading project
+12:02:37.349650 [info ]: Loading profiles.yml
+12:02:37.349713 [info ]: Finished loading project [  0.00s]
+12:02:37.353637 [debug]:    Started loading packages
+12:02:37.355218 [debug]:     Loaded [  0.00s] packages
+12:02:37.355900 [info ]: Started parsing
+12:02:37.372625 [info ]: Finished loading project [  0.02s]
+12:02:37.372914 [debug]: Finished parsing models\schema.yml [  0.00s]
+12:02:37.374336 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+12:02:37.375398 [warn ]: dbt1089: Unused schema.yml entry for model 'v_silver'
+  --> models\schema.yml
+12:02:37.375419 [debug]: Finished parsing models\staging\stg_parquets.sql [  0.00s]
+12:02:37.376281 [error]: dbt1048: Ref 'v_silver' not found in project. Searched for 'dilemme_prisonnier.v_silver, v_silver'
+  --> models\marts\mart_tournois_stats.sql:30:6
+12:02:37.377047 [info ]: Cached model count updated: 2 models (estimate)
+12:02:37.377058 [info ]: Cached model count updated: 2 models (accurate)
+12:02:37.377073 [info ]: Started scheduling
+12:02:37.377096 [info ]: Finished scheduling [  0.00s]
+12:02:37.377107 [debug]: Compilation - 0 nodes selected: {}
+12:02:37.377115 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:02:37.377120 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:02:37.377125 [info ]: Started scheduling
+12:02:37.377146 [info ]: Finished scheduling [  0.00s]
+12:02:37.517528 [info ]: Started building task graph
+12:02:37.517560 [info ]: Finished building task graph [  0.00s]
+12:02:37.519547 [info ]: Started scheduling
+12:02:37.519584 [info ]: Finished scheduling [  0.00s]
+12:02:37.521101 [info ]: Cached model count updated: 2 models (accurate)
+12:02:37.521135 [info ]: Finished parsing [  0.17s]
+12:02:39.037050 [info ]: Started loading project
+12:02:39.037498 [info ]: Loading profiles.yml
+12:02:39.050737 [info ]: Cached model count updated: 2 models (estimate)
+12:02:39.050759 [info ]: Cached model count updated: 2 models (accurate)
+12:02:39.050777 [info ]: Started scheduling
+12:02:39.050812 [info ]: Finished scheduling [  0.00s]
+12:02:39.050824 [debug]: Compilation - 2 nodes selected: {"model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:02:39.175842 [info ]: Started building task graph
+12:02:39.175889 [info ]: Finished building task graph [  0.00s]
+12:02:39.175996 [info ]: Started rendering (2 nodes)
+12:02:39.176008 [info ]: Started model main.stg_parquets
+12:02:39.176019 [debug]: Started rendering model main.stg_parquets
+12:02:39.176039 [info ]: Started model main.mart_tournois_stats
+12:02:39.176045 [debug]: Started rendering model main.mart_tournois_stats
+12:02:39.176073 [info ]: Finished loading project [  0.14s]
+12:02:39.176701 [error]: dbt1501: Failed to render SQL not a key type: ref not found for package: dilemme_prisonnier, model: v_silver, version: None
+(in models\marts\mart_tournois_stats.sql:30:6)
+  --> models\marts\mart_tournois_stats.sql:30:6
+12:02:39.176737 [info ]: Started analyzing (2 nodes)
+12:02:39.176744 [debug]: Started analyzing model main.mart_tournois_stats
+12:02:39.176756 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [skipped]
+12:02:39.176765 [info ]:     Failed [-------] model main.mart_tournois_stats (view)
+12:02:39.176790 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [error]
+12:02:39.183093 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:02:39.183256 [debug]: Finished rendering [  0.01s] model main.stg_parquets [success]
+12:02:39.183279 [info ]: Finished rendering [  0.01s] (2 nodes, 0 skipped, 1 errors)
+12:02:39.183317 [debug]: Started analyzing model main.stg_parquets
+12:02:39.183488 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:02:39.183499 [info ]: Finished analyzing [  0.01s] (2 nodes, 1 skipped, 0 errors)
+12:02:39.183507 [info ]:  Succeeded [  0.01s] model main.stg_parquets (view)
+12:02:39.185789 [info ]: Started scheduling
+12:02:39.185836 [info ]: Finished scheduling [  0.00s]
+12:02:39.186872 [info ]: Cached model count updated: 2 models (accurate)
+12:02:40.578977 [info ]: Started loading project
+12:02:40.579445 [info ]: Loading profiles.yml
+12:02:40.582017 [info ]: Started loading project
+12:02:40.582410 [info ]: Loading profiles.yml
+12:02:40.582449 [info ]: Finished loading project [  0.00s]
+12:02:40.586518 [debug]:    Started loading packages
+12:02:40.587911 [debug]:     Loaded [  0.00s] packages
+12:02:40.588428 [info ]: Started parsing
+12:02:40.604454 [info ]: Finished loading project [  0.02s]
+12:02:40.604914 [debug]: Finished parsing models\schema.yml [  0.00s]
+12:02:40.607070 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+12:02:40.607495 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+12:02:40.608792 [warn ]: dbt1089: Unused schema.yml entry for model 'v_silver'
+  --> models\schema.yml
+12:02:40.608865 [debug]: Finished parsing models\staging\stg_parquets.sql [  0.00s]
+12:02:40.609732 [error]: dbt1048: Ref 'v_silver' not found in project. Searched for 'dilemme_prisonnier.v_silver, v_silver'
+  --> models\marts\mart_tournois_stats.sql:30:6
+12:02:40.610577 [info ]: Cached model count updated: 3 models (estimate)
+12:02:40.610592 [info ]: Cached model count updated: 3 models (accurate)
+12:02:40.610612 [info ]: Started scheduling
+12:02:40.610642 [info ]: Finished scheduling [  0.00s]
+12:02:40.610654 [debug]: Compilation - 0 nodes selected: {}
+12:02:40.610664 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:02:40.610670 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:02:40.610675 [info ]: Started scheduling
+12:02:40.610699 [info ]: Finished scheduling [  0.00s]
+12:02:40.733767 [info ]: Started building task graph
+12:02:40.733799 [info ]: Finished building task graph [  0.00s]
+12:02:40.735507 [info ]: Started scheduling
+12:02:40.735541 [info ]: Finished scheduling [  0.00s]
+12:02:40.736883 [info ]: Cached model count updated: 3 models (accurate)
+12:02:40.736909 [info ]: Finished parsing [  0.15s]
+12:02:42.262215 [info ]: Started loading project
+12:02:42.262705 [info ]: Loading profiles.yml
+12:02:42.276197 [info ]: Cached model count updated: 3 models (estimate)
+12:02:42.276220 [info ]: Cached model count updated: 3 models (accurate)
+12:02:42.276242 [info ]: Started scheduling
+12:02:42.276288 [info ]: Finished scheduling [  0.00s]
+12:02:42.276302 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:02:42.402524 [info ]: Started building task graph
+12:02:42.402575 [info ]: Finished building task graph [  0.00s]
+12:02:42.402672 [info ]: Started rendering (3 nodes)
+12:02:42.402687 [info ]: Started model main.stg_parquets
+12:02:42.402698 [debug]: Started rendering model main.stg_parquets
+12:02:42.402717 [info ]: Started model main.mart_player_performance
+12:02:42.402723 [debug]: Started rendering model main.mart_player_performance
+12:02:42.402730 [info ]: Started model main.mart_tournois_stats
+12:02:42.402734 [debug]: Started rendering model main.mart_tournois_stats
+12:02:42.402750 [info ]: Finished loading project [  0.14s]
+12:02:42.403516 [error]: dbt1501: Failed to render SQL not a key type: ref not found for package: dilemme_prisonnier, model: v_silver, version: None
+(in models\marts\mart_tournois_stats.sql:30:6)
+  --> models\marts\mart_tournois_stats.sql:30:6
+12:02:42.403553 [info ]: Started analyzing (3 nodes)
+12:02:42.403562 [debug]: Started analyzing model main.mart_tournois_stats
+12:02:42.403574 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [skipped]
+12:02:42.403584 [info ]:     Failed [-------] model main.mart_tournois_stats (view)
+12:02:42.403610 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [error]
+12:02:42.403694 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:02:42.403759 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:02:42.403781 [debug]: Started analyzing model main.mart_player_performance
+12:02:42.404232 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:02:42.404244 [info ]:  Succeeded [  0.00s] model main.mart_player_performance (view)
+12:02:42.407566 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:02:42.407682 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:02:42.407709 [info ]: Finished rendering [  0.01s] (3 nodes, 0 skipped, 1 errors)
+12:02:42.407727 [debug]: Started analyzing model main.stg_parquets
+12:02:42.407865 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:02:42.407873 [info ]: Finished analyzing [  0.00s] (3 nodes, 1 skipped, 0 errors)
+12:02:42.407881 [info ]:  Succeeded [  0.00s] model main.stg_parquets (view)
+12:02:42.411080 [info ]: Started scheduling
+12:02:42.411125 [info ]: Finished scheduling [  0.00s]
+12:02:42.411985 [info ]: Cached model count updated: 3 models (accurate)
+12:02:44.221680 [info ]: Started loading project
+12:02:44.222166 [info ]: Loading profiles.yml
+12:02:44.224566 [info ]: Started loading project
+12:02:44.224928 [info ]: Loading profiles.yml
+12:02:44.225034 [info ]: Finished loading project [  0.00s]
+12:02:44.228744 [debug]:    Started loading packages
+12:02:44.230152 [debug]:     Loaded [  0.00s] packages
+12:02:44.230660 [info ]: Started parsing
+12:02:44.248103 [info ]: Finished loading project [  0.02s]
+12:02:44.248298 [debug]: Finished parsing models\marts\schema.yml [  0.00s]
+12:02:44.248576 [debug]: Finished parsing models\schema.yml [  0.00s]
+12:02:44.250089 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+12:02:44.250535 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+12:02:44.251762 [warn ]: dbt1089: Unused schema.yml entry for model 'v_silver'
+  --> models\schema.yml
+12:02:44.251786 [debug]: Finished parsing models\staging\stg_parquets.sql [  0.00s]
+12:02:44.252645 [error]: dbt1048: Ref 'v_silver' not found in project. Searched for 'dilemme_prisonnier.v_silver, v_silver'
+  --> models\marts\mart_tournois_stats.sql:30:6
+12:02:44.253542 [info ]: Cached model count updated: 3 models (estimate)
+12:02:44.253570 [info ]: Cached model count updated: 3 models (accurate)
+12:02:44.253590 [info ]: Started scheduling
+12:02:44.253633 [info ]: Finished scheduling [  0.00s]
+12:02:44.253647 [debug]: Compilation - 0 nodes selected: {}
+12:02:44.253656 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:02:44.253662 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:02:44.253668 [info ]: Started scheduling
+12:02:44.253695 [info ]: Finished scheduling [  0.00s]
+12:02:44.376297 [info ]: Started building task graph
+12:02:44.376327 [info ]: Finished building task graph [  0.00s]
+12:02:44.378130 [info ]: Started scheduling
+12:02:44.378164 [info ]: Finished scheduling [  0.00s]
+12:02:44.379731 [info ]: Cached model count updated: 3 models (accurate)
+12:02:44.379769 [info ]: Finished parsing [  0.15s]
+12:02:45.894992 [info ]: Started loading project
+12:02:45.895484 [info ]: Loading profiles.yml
+12:02:45.911384 [info ]: Cached model count updated: 3 models (estimate)
+12:02:45.911408 [info ]: Cached model count updated: 3 models (accurate)
+12:02:45.911435 [info ]: Started scheduling
+12:02:45.911492 [info ]: Finished scheduling [  0.00s]
+12:02:45.911512 [debug]: Compilation - 1 nodes selected: {"model.dilemme_prisonnier.mart_tournois_stats"}
+12:02:46.037591 [info ]: Started building task graph
+12:02:46.037633 [info ]: Finished building task graph [  0.00s]
+12:02:46.037732 [info ]: Started rendering (1 nodes)
+12:02:46.037747 [info ]: Started model main.mart_tournois_stats
+12:02:46.037757 [debug]: Started rendering model main.mart_tournois_stats
+12:02:46.037795 [info ]: Finished loading project [  0.14s]
+12:02:46.038315 [error]: dbt1501: Failed to render SQL not a key type: ref not found for package: dilemme_prisonnier, model: v_silver, version: None
+(in models\marts\mart_tournois_stats.sql:30:6)
+  --> models\marts\mart_tournois_stats.sql:30:6
+12:02:46.038352 [info ]: Started analyzing (1 nodes)
+12:02:46.038360 [debug]: Started analyzing model main.mart_tournois_stats
+12:02:46.038371 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [skipped]
+12:02:46.038378 [info ]: Finished analyzing [  0.00s] (1 nodes, 1 skipped, 0 errors)
+12:02:46.038383 [info ]:     Failed [-------] model main.mart_tournois_stats (view)
+12:02:46.040309 [info ]: Started scheduling
+12:02:46.040339 [info ]: Finished scheduling [  0.00s]
+12:02:46.040725 [info ]: Cached model count updated: 3 models (accurate)
+12:02:46.040744 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [error]
+12:02:46.040751 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 1 errors)
+12:02:47.564136 [info ]: Started loading project
+12:02:47.564637 [info ]: Loading profiles.yml
+12:02:47.578801 [info ]: Cached model count updated: 3 models (estimate)
+12:02:47.578824 [info ]: Cached model count updated: 3 models (accurate)
+12:02:47.578850 [info ]: Started scheduling
+12:02:47.578901 [info ]: Finished scheduling [  0.00s]
+12:02:47.578913 [debug]: Compilation - 2 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats"}
+12:02:47.727670 [info ]: Started building task graph
+12:02:47.727722 [info ]: Finished building task graph [  0.00s]
+12:02:47.727830 [info ]: Started rendering (2 nodes)
+12:02:47.727846 [info ]: Started model main.mart_player_performance
+12:02:47.727856 [debug]: Started rendering model main.mart_player_performance
+12:02:47.727876 [info ]: Started model main.mart_tournois_stats
+12:02:47.727884 [debug]: Started rendering model main.mart_tournois_stats
+12:02:47.727917 [info ]: Finished loading project [  0.16s]
+12:02:47.728494 [error]: dbt1501: Failed to render SQL not a key type: ref not found for package: dilemme_prisonnier, model: v_silver, version: None
+(in models\marts\mart_tournois_stats.sql:30:6)
+  --> models\marts\mart_tournois_stats.sql:30:6
+12:02:47.728531 [info ]: Started analyzing (2 nodes)
+12:02:47.728541 [debug]: Started analyzing model main.mart_tournois_stats
+12:02:47.728553 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [skipped]
+12:02:47.728566 [info ]:     Failed [-------] model main.mart_tournois_stats (view)
+12:02:47.728594 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [error]
+12:02:47.730638 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:02:47.730901 [debug]: Started analyzing model main.mart_player_performance
+12:02:47.731138 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:02:47.731154 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 1 errors)
+12:02:47.731353 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:02:47.731370 [info ]: Finished analyzing [  0.00s] (2 nodes, 1 skipped, 0 errors)
+12:02:47.731376 [info ]:  Succeeded [  0.00s] model main.mart_player_performance (view)
+12:02:47.733345 [info ]: Started scheduling
+12:02:47.733382 [info ]: Finished scheduling [  0.00s]
+12:02:47.734266 [info ]: Cached model count updated: 3 models (accurate)
+12:02:49.237177 [info ]: Started loading project
+12:02:49.237658 [info ]: Loading profiles.yml
+12:02:49.251675 [info ]: Cached model count updated: 3 models (estimate)
+12:02:49.251700 [info ]: Cached model count updated: 3 models (accurate)
+12:02:49.251723 [info ]: Started scheduling
+12:02:49.251765 [info ]: Finished scheduling [  0.00s]
+12:02:49.251780 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:02:49.377609 [info ]: Started building task graph
+12:02:49.377661 [info ]: Finished building task graph [  0.00s]
+12:02:49.377773 [info ]: Started rendering (3 nodes)
+12:02:49.377790 [info ]: Started model main.stg_parquets
+12:02:49.377799 [debug]: Started rendering model main.stg_parquets
+12:02:49.377820 [info ]: Started model main.mart_player_performance
+12:02:49.377827 [debug]: Started rendering model main.mart_player_performance
+12:02:49.377835 [info ]: Started model main.mart_tournois_stats
+12:02:49.377847 [debug]: Started rendering model main.mart_tournois_stats
+12:02:49.377857 [info ]: Finished loading project [  0.14s]
+12:02:49.378489 [error]: dbt1501: Failed to render SQL not a key type: ref not found for package: dilemme_prisonnier, model: v_silver, version: None
+(in models\marts\mart_tournois_stats.sql:30:6)
+  --> models\marts\mart_tournois_stats.sql:30:6
+12:02:49.378544 [info ]: Started analyzing (3 nodes)
+12:02:49.378555 [debug]: Started analyzing model main.mart_tournois_stats
+12:02:49.378583 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [skipped]
+12:02:49.378601 [info ]:     Failed [-------] model main.mart_tournois_stats (view)
+12:02:49.378633 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [error]
+12:02:49.381435 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:02:49.381537 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:02:49.381568 [debug]: Started analyzing model main.stg_parquets
+12:02:49.381703 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:02:49.381714 [info ]:  Succeeded [  0.00s] model main.stg_parquets (view)
+12:02:49.382242 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:02:49.382338 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:02:49.382357 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 1 errors)
+12:02:49.382371 [debug]: Started analyzing model main.mart_player_performance
+12:02:49.382751 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:02:49.382761 [info ]: Finished analyzing [  0.00s] (3 nodes, 1 skipped, 0 errors)
+12:02:49.382768 [info ]:  Succeeded [  0.00s] model main.mart_player_performance (view)
+12:02:49.384787 [info ]: Started scheduling
+12:02:49.384823 [info ]: Finished scheduling [  0.00s]
+12:02:49.385776 [info ]: Cached model count updated: 3 models (accurate)
+12:03:15.786583 [info ]: Started loading project
+12:03:15.787036 [info ]: Loading profiles.yml
+12:03:15.793143 [info ]: Started parsing
+12:03:15.804914 [info ]: Finished loading project [  0.02s]
+12:03:15.805350 [debug]: Finished parsing models\marts\schema.yml [  0.00s]
+12:03:15.806614 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+12:03:15.808228 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+12:03:15.810237 [info ]: Finished parsing [  0.02s]
+12:03:15.811169 [info ]: Cached model count updated: 3 models (estimate)
+12:03:15.811182 [info ]: Cached model count updated: 3 models (accurate)
+12:03:15.811200 [info ]: Started scheduling
+12:03:15.811248 [info ]: Finished scheduling [  0.00s]
+12:03:15.811259 [debug]: Compilation - 2 nodes selected: {"model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:03:15.934580 [info ]: Started building task graph
+12:03:15.934631 [info ]: Finished building task graph [  0.00s]
+12:03:15.934747 [info ]: Started rendering (2 nodes)
+12:03:15.934766 [info ]: Started model main.mart_tournois_stats
+12:03:15.934776 [debug]: Started rendering model main.mart_tournois_stats
+12:03:15.934796 [info ]: Started model main.stg_parquets
+12:03:15.934801 [debug]: Started rendering model main.stg_parquets
+12:03:15.935924 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+12:03:15.936009 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+12:03:15.936039 [info ]: Started analyzing (2 nodes)
+12:03:15.936047 [debug]: Started analyzing model main.mart_tournois_stats
+12:03:15.937264 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:03:15.937417 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:03:15.937431 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+12:03:15.937446 [debug]: Started analyzing model main.stg_parquets
+12:03:15.937547 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:03:15.937556 [info ]:  Succeeded [  0.00s] model main.stg_parquets (view)
+12:03:15.938820 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+12:03:15.938836 [info ]: Finished analyzing [  0.00s] (2 nodes, 0 skipped, 0 errors)
+12:03:15.938843 [info ]:  Succeeded [  0.00s] model main.mart_tournois_stats (view)
+12:03:15.940694 [info ]: Started scheduling
+12:03:15.940755 [info ]: Finished scheduling [  0.00s]
+12:03:15.941354 [info ]: Cached model count updated: 3 models (accurate)
+12:03:17.458287 [info ]: Started loading project
+12:03:17.458783 [info ]: Loading profiles.yml
+12:03:17.474384 [info ]: Cached model count updated: 3 models (estimate)
+12:03:17.474405 [info ]: Cached model count updated: 3 models (accurate)
+12:03:17.474431 [info ]: Started scheduling
+12:03:17.474493 [info ]: Finished scheduling [  0.00s]
+12:03:17.474507 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:03:17.612530 [info ]: Started building task graph
+12:03:17.612580 [info ]: Finished building task graph [  0.00s]
+12:03:17.612676 [info ]: Started rendering (3 nodes)
+12:03:17.612690 [info ]: Started model main.mart_player_performance
+12:03:17.612698 [debug]: Started rendering model main.mart_player_performance
+12:03:17.612716 [info ]: Started model main.mart_tournois_stats
+12:03:17.612720 [debug]: Started rendering model main.mart_tournois_stats
+12:03:17.612727 [info ]: Started model main.stg_parquets
+12:03:17.612730 [debug]: Started rendering model main.stg_parquets
+12:03:17.612756 [info ]: Finished loading project [  0.15s]
+12:03:17.613082 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:03:17.613141 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:03:17.613163 [info ]: Started analyzing (3 nodes)
+12:03:17.613169 [debug]: Started analyzing model main.mart_player_performance
+12:03:17.613198 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+12:03:17.613229 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:03:17.613283 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+12:03:17.613301 [debug]: Started analyzing model main.mart_tournois_stats
+12:03:17.613314 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:03:17.613318 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:03:17.613324 [debug]: Started analyzing model main.stg_parquets
+12:03:17.613409 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:03:17.613417 [info ]:  Succeeded [-------] model main.stg_parquets (view)
+12:03:17.613551 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:03:17.613563 [info ]:  Succeeded [-------] model main.mart_player_performance (view)
+12:03:17.614936 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+12:03:17.614951 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:03:17.614958 [info ]:  Succeeded [  0.00s] model main.mart_tournois_stats (view)
+12:03:17.616720 [info ]: Started scheduling
+12:03:17.616761 [info ]: Finished scheduling [  0.00s]
+12:03:17.617686 [info ]: Cached model count updated: 3 models (accurate)
+12:03:19.142511 [info ]: Started loading project
+12:03:19.142930 [info ]: Loading profiles.yml
+12:03:19.145337 [info ]: Started loading project
+12:03:19.145813 [info ]: Loading profiles.yml
+12:03:19.145873 [info ]: Finished loading project [  0.00s]
+12:03:19.149664 [debug]:    Started loading packages
+12:03:19.151146 [debug]:     Loaded [  0.00s] packages
+12:03:19.151726 [info ]: Started parsing
+12:03:19.168992 [info ]: Finished loading project [  0.02s]
+12:03:19.169306 [debug]: Finished parsing models\marts\schema.yml [  0.00s]
+12:03:19.169575 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+12:03:19.171071 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+12:03:19.171506 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+12:03:19.172867 [warn ]: dbt1089: Unused schema.yml entry for model 'v_silver'
+  --> models\staging\schema.yml
+12:03:19.172948 [debug]: Finished parsing models\staging\stg_parquets.sql [  0.00s]
+12:03:19.174319 [info ]: Finished parsing [  0.02s]
+12:03:19.174676 [info ]: Cached model count updated: 3 models (estimate)
+12:03:19.174688 [info ]: Cached model count updated: 3 models (accurate)
+12:03:19.174705 [info ]: Started scheduling
+12:03:19.174747 [info ]: Finished scheduling [  0.00s]
+12:03:19.174757 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:03:19.174767 [info ]: Started scheduling
+12:03:19.174783 [info ]: Finished scheduling [  0.00s]
+12:03:19.307028 [info ]: Started building task graph
+12:03:19.307083 [info ]: Finished building task graph [  0.00s]
+12:03:19.307188 [info ]: Started rendering (3 nodes)
+12:03:19.307203 [info ]: Started model main.mart_player_performance
+12:03:19.307213 [debug]: Started rendering model main.mart_player_performance
+12:03:19.307233 [info ]: Started model main.mart_tournois_stats
+12:03:19.307240 [debug]: Started rendering model main.mart_tournois_stats
+12:03:19.307247 [info ]: Started model main.stg_parquets
+12:03:19.307251 [debug]: Started rendering model main.stg_parquets
+12:03:19.308287 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:03:19.308323 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:03:19.308338 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+12:03:19.308391 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:03:19.308418 [info ]: Started analyzing (3 nodes)
+12:03:19.308428 [debug]: Started analyzing model main.stg_parquets
+12:03:19.308443 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:03:19.308451 [debug]: Started analyzing model main.mart_player_performance
+12:03:19.308459 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+12:03:19.308463 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:03:19.308468 [debug]: Started analyzing model main.mart_tournois_stats
+12:03:19.308582 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:03:19.308591 [info ]:  Succeeded [  0.00s] model main.stg_parquets (view)
+12:03:19.308926 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:03:19.308944 [info ]:  Succeeded [  0.00s] model main.mart_player_performance (view)
+12:03:19.310415 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+12:03:19.310430 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:03:19.310436 [info ]:  Succeeded [  0.00s] model main.mart_tournois_stats (view)
+12:03:19.313000 [info ]: Started scheduling
+12:03:19.313042 [info ]: Finished scheduling [  0.00s]
+12:03:19.314740 [info ]: Cached model count updated: 3 models (accurate)
+12:03:19.716347 [info ]: Started loading project
+12:03:19.716824 [info ]: Loading profiles.yml
+12:03:19.732036 [info ]: Finished loading project [  0.02s]
+12:03:19.732154 [info ]: Cached model count updated: 3 models (accurate)
+12:03:21.253848 [info ]: Started loading project
+12:03:21.254348 [info ]: Loading profiles.yml
+12:03:21.268622 [info ]: Cached model count updated: 3 models (estimate)
+12:03:21.268645 [info ]: Cached model count updated: 3 models (accurate)
+12:03:21.268668 [info ]: Started scheduling
+12:03:21.268713 [info ]: Finished scheduling [  0.00s]
+12:03:21.268730 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:03:21.400604 [info ]: Started building task graph
+12:03:21.400658 [info ]: Finished building task graph [  0.00s]
+12:03:21.400767 [info ]: Started rendering (3 nodes)
+12:03:21.400783 [info ]: Started model main.mart_player_performance
+12:03:21.400793 [debug]: Started rendering model main.mart_player_performance
+12:03:21.400813 [info ]: Started model main.mart_tournois_stats
+12:03:21.400820 [debug]: Started rendering model main.mart_tournois_stats
+12:03:21.400832 [info ]: Started model main.stg_parquets
+12:03:21.400838 [debug]: Started rendering model main.stg_parquets
+12:03:21.400855 [info ]: Finished loading project [  0.15s]
+12:03:21.401159 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+12:03:21.401214 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+12:03:21.401238 [info ]: Started analyzing (3 nodes)
+12:03:21.401246 [debug]: Started analyzing model main.mart_tournois_stats
+12:03:21.403153 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+12:03:21.403174 [info ]:  Succeeded [  0.00s] model main.mart_tournois_stats (view)
+12:03:21.403388 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:03:21.403463 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:03:21.403486 [debug]: Started analyzing model main.mart_player_performance
+12:03:21.403834 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:03:21.403882 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:03:21.403894 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:03:21.403904 [debug]: Started analyzing model main.stg_parquets
+12:03:21.404002 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:03:21.404017 [info ]:  Succeeded [  0.00s] model main.stg_parquets (view)
+12:03:21.404233 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:03:21.404243 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:03:21.404249 [info ]:  Succeeded [  0.00s] model main.mart_player_performance (view)
+12:03:21.406191 [info ]: Started scheduling
+12:03:21.406227 [info ]: Finished scheduling [  0.00s]
+12:03:21.407043 [info ]: Cached model count updated: 3 models (accurate)
+12:03:29.658057 [info ]: Started loading project
+12:03:29.658767 [info ]: Loading profiles.yml
+12:03:29.663192 [info ]: Started parsing
+12:03:29.676247 [info ]: Finished loading project [  0.02s]
+12:03:29.676822 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+12:03:29.679674 [debug]: Finished parsing models\staging\stg_parquets.sql [  0.00s]
+12:03:29.680417 [info ]: Finished parsing [  0.02s]
+12:03:29.681428 [info ]: Cached model count updated: 3 models (estimate)
+12:03:29.681444 [info ]: Cached model count updated: 3 models (accurate)
+12:03:29.681474 [info ]: Started scheduling
+12:03:29.681540 [info ]: Finished scheduling [  0.00s]
+12:03:29.681569 [debug]: Compilation - 0 nodes selected: {}
+12:03:29.681583 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:03:29.681593 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:03:29.838842 [info ]: Started building task graph
+12:03:29.838874 [info ]: Finished building task graph [  0.00s]
+12:03:29.840640 [info ]: Started scheduling
+12:03:29.840721 [info ]: Finished scheduling [  0.00s]
+12:03:29.841313 [info ]: Cached model count updated: 3 models (accurate)
+12:03:31.367603 [info ]: Started loading project
+12:03:31.368052 [info ]: Loading profiles.yml
+12:03:31.380930 [info ]: Cached model count updated: 3 models (estimate)
+12:03:31.380956 [info ]: Cached model count updated: 3 models (accurate)
+12:03:31.380981 [info ]: Started scheduling
+12:03:31.381011 [info ]: Finished scheduling [  0.00s]
+12:03:31.381022 [debug]: Compilation - 0 nodes selected: {}
+12:03:31.381031 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:03:31.381039 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:03:31.529888 [info ]: Started building task graph
+12:03:31.529918 [info ]: Finished building task graph [  0.00s]
+12:03:31.531827 [info ]: Started scheduling
+12:03:31.531861 [info ]: Finished scheduling [  0.00s]
+12:03:31.532059 [info ]: Finished loading project [  0.16s]
+12:03:31.532733 [info ]: Cached model count updated: 3 models (accurate)
+12:03:33.052388 [info ]: Started loading project
+12:03:33.052859 [info ]: Loading profiles.yml
+12:03:33.066044 [info ]: Cached model count updated: 3 models (estimate)
+12:03:33.066066 [info ]: Cached model count updated: 3 models (accurate)
+12:03:33.066085 [info ]: Started scheduling
+12:03:33.066128 [info ]: Finished scheduling [  0.00s]
+12:03:33.066141 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:03:33.209666 [info ]: Started building task graph
+12:03:33.209720 [info ]: Finished building task graph [  0.00s]
+12:03:33.209822 [info ]: Started rendering (3 nodes)
+12:03:33.209836 [info ]: Started model main.mart_player_performance
+12:03:33.209847 [debug]: Started rendering model main.mart_player_performance
+12:03:33.209874 [info ]: Started model main.mart_tournois_stats
+12:03:33.209881 [debug]: Started rendering model main.mart_tournois_stats
+12:03:33.209889 [info ]: Started model main.stg_parquets
+12:03:33.209893 [debug]: Started rendering model main.stg_parquets
+12:03:33.209908 [info ]: Finished loading project [  0.16s]
+12:03:33.210246 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:03:33.210277 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+12:03:33.210293 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:03:33.210326 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:03:33.210350 [info ]: Started analyzing (3 nodes)
+12:03:33.210357 [debug]: Started analyzing model main.mart_player_performance
+12:03:33.210371 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+12:03:33.210380 [debug]: Started analyzing model main.mart_tournois_stats
+12:03:33.210388 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:03:33.210392 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:03:33.210396 [debug]: Started analyzing model main.stg_parquets
+12:03:33.210537 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:03:33.210551 [info ]:  Succeeded [-------] model main.stg_parquets (view)
+12:03:33.210753 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:03:33.210764 [info ]:  Succeeded [-------] model main.mart_player_performance (view)
+12:03:33.212178 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+12:03:33.212195 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:03:33.212202 [info ]:  Succeeded [  0.00s] model main.mart_tournois_stats (view)
+12:03:33.214038 [info ]: Started scheduling
+12:03:33.214075 [info ]: Finished scheduling [  0.00s]
+12:03:33.214873 [info ]: Cached model count updated: 3 models (accurate)
+12:03:51.334696 [info ]: Started loading project
+12:03:51.335144 [info ]: Loading profiles.yml
+12:03:51.338225 [info ]: Started parsing
+12:03:51.349245 [info ]: Finished loading project [  0.01s]
+12:03:51.349671 [debug]: Finished parsing models\staging\schema.yml [  0.00s]
+12:03:51.352481 [debug]: Finished parsing models\staging\stg_parquets.sql [  0.00s]
+12:03:51.353153 [info ]: Finished parsing [  0.01s]
+12:03:51.354157 [info ]: Cached model count updated: 3 models (estimate)
+12:03:51.354171 [info ]: Cached model count updated: 3 models (accurate)
+12:03:51.354187 [info ]: Started scheduling
+12:03:51.354212 [info ]: Finished scheduling [  0.00s]
+12:03:51.354222 [debug]: Compilation - 0 nodes selected: {}
+12:03:51.354231 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:03:51.354237 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:03:51.481536 [info ]: Started building task graph
+12:03:51.481568 [info ]: Finished building task graph [  0.00s]
+12:03:51.483181 [info ]: Started scheduling
+12:03:51.483215 [info ]: Finished scheduling [  0.00s]
+12:03:51.483762 [info ]: Cached model count updated: 3 models (accurate)
+12:03:53.002300 [info ]: Started loading project
+12:03:53.002854 [info ]: Loading profiles.yml
+12:03:53.016037 [info ]: Cached model count updated: 3 models (estimate)
+12:03:53.016060 [info ]: Cached model count updated: 3 models (accurate)
+12:03:53.016082 [info ]: Started scheduling
+12:03:53.016111 [info ]: Finished scheduling [  0.00s]
+12:03:53.016123 [debug]: Compilation - 0 nodes selected: {}
+12:03:53.016132 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+12:03:53.016139 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+12:03:53.137070 [info ]: Started building task graph
+12:03:53.137103 [info ]: Finished building task graph [  0.00s]
+12:03:53.138872 [info ]: Started scheduling
+12:03:53.138912 [info ]: Finished scheduling [  0.00s]
+12:03:53.139129 [info ]: Finished loading project [  0.14s]
+12:03:53.139838 [info ]: Cached model count updated: 3 models (accurate)
+12:03:54.653257 [info ]: Started loading project
+12:03:54.653691 [info ]: Loading profiles.yml
+12:03:54.666267 [info ]: Cached model count updated: 3 models (estimate)
+12:03:54.666288 [info ]: Cached model count updated: 3 models (accurate)
+12:03:54.666306 [info ]: Started scheduling
+12:03:54.666351 [info ]: Finished scheduling [  0.00s]
+12:03:54.666363 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:03:54.788992 [info ]: Started building task graph
+12:03:54.789045 [info ]: Finished building task graph [  0.00s]
+12:03:54.789145 [info ]: Started rendering (3 nodes)
+12:03:54.789159 [info ]: Started model main.mart_player_performance
+12:03:54.789170 [debug]: Started rendering model main.mart_player_performance
+12:03:54.789189 [info ]: Started model main.mart_tournois_stats
+12:03:54.789195 [debug]: Started rendering model main.mart_tournois_stats
+12:03:54.789203 [info ]: Started model main.stg_parquets
+12:03:54.789207 [debug]: Started rendering model main.stg_parquets
+12:03:54.789223 [info ]: Finished loading project [  0.14s]
+12:03:54.789659 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:03:54.789753 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:03:54.789779 [info ]: Started analyzing (3 nodes)
+12:03:54.789786 [debug]: Started analyzing model main.mart_player_performance
+12:03:54.789815 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+12:03:54.789858 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+12:03:54.789883 [debug]: Started analyzing model main.mart_tournois_stats
+12:03:54.790209 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:03:54.790222 [info ]:  Succeeded [-------] model main.mart_player_performance (view)
+12:03:54.790564 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:03:54.790626 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:03:54.790640 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:03:54.790651 [debug]: Started analyzing model main.stg_parquets
+12:03:54.790729 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:03:54.790736 [info ]:  Succeeded [  0.00s] model main.stg_parquets (view)
+12:03:54.791774 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+12:03:54.791791 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:03:54.791798 [info ]:  Succeeded [  0.00s] model main.mart_tournois_stats (view)
+12:03:54.793705 [info ]: Started scheduling
+12:03:54.793739 [info ]: Finished scheduling [  0.00s]
+12:03:54.794587 [info ]: Cached model count updated: 3 models (accurate)
+12:04:54.961381 [info ]: Started loading project
+12:04:54.961890 [info ]: Loading profiles.yml
+12:04:54.965343 [info ]: Started parsing
+12:04:54.978632 [info ]: Finished loading project [  0.02s]
+12:04:54.979104 [debug]: Finished parsing models\marts\schema.yml [  0.00s]
+12:04:54.980663 [debug]: Finished parsing models\marts\mart_player_performance.sql [  0.00s]
+12:04:54.982128 [debug]: Finished parsing models\marts\mart_tournois_stats.sql [  0.00s]
+12:04:54.982886 [info ]: Finished parsing [  0.02s]
+12:04:54.983976 [info ]: Cached model count updated: 3 models (estimate)
+12:04:54.983991 [info ]: Cached model count updated: 3 models (accurate)
+12:04:54.984012 [info ]: Started scheduling
+12:04:54.984070 [info ]: Finished scheduling [  0.00s]
+12:04:54.984082 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:04:55.111039 [info ]: Started building task graph
+12:04:55.111094 [info ]: Finished building task graph [  0.00s]
+12:04:55.111199 [info ]: Started rendering (3 nodes)
+12:04:55.111216 [info ]: Started model main.mart_player_performance
+12:04:55.111227 [debug]: Started rendering model main.mart_player_performance
+12:04:55.111247 [info ]: Started model main.mart_tournois_stats
+12:04:55.111252 [debug]: Started rendering model main.mart_tournois_stats
+12:04:55.111260 [info ]: Started model main.stg_parquets
+12:04:55.111263 [debug]: Started rendering model main.stg_parquets
+12:04:55.111867 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+12:04:55.111974 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:04:55.111996 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+12:04:55.112026 [info ]: Started analyzing (3 nodes)
+12:04:55.112036 [debug]: Started analyzing model main.mart_tournois_stats
+12:04:55.112047 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:04:55.112054 [debug]: Started analyzing model main.stg_parquets
+12:04:55.112213 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:04:55.112231 [info ]:  Succeeded [-------] model main.stg_parquets (view)
+12:04:55.112248 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:04:55.112328 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:04:55.112341 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:04:55.112351 [debug]: Started analyzing model main.mart_player_performance
+12:04:55.112679 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:04:55.112690 [info ]:  Succeeded [  0.00s] model main.mart_player_performance (view)
+12:04:55.114007 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+12:04:55.114025 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:04:55.114032 [info ]:  Succeeded [  0.00s] model main.mart_tournois_stats (view)
+12:04:55.116439 [info ]: Started scheduling
+12:04:55.116496 [info ]: Finished scheduling [  0.00s]
+12:04:55.117087 [info ]: Cached model count updated: 3 models (accurate)
+12:04:56.632393 [info ]: Started loading project
+12:04:56.632871 [info ]: Loading profiles.yml
+12:04:56.651755 [info ]: Cached model count updated: 3 models (estimate)
+12:04:56.651777 [info ]: Cached model count updated: 3 models (accurate)
+12:04:56.651802 [info ]: Started scheduling
+12:04:56.651866 [info ]: Finished scheduling [  0.00s]
+12:04:56.651882 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:04:56.799049 [info ]: Started building task graph
+12:04:56.799105 [info ]: Finished building task graph [  0.00s]
+12:04:56.799224 [info ]: Started rendering (3 nodes)
+12:04:56.799240 [info ]: Started model main.mart_player_performance
+12:04:56.799251 [debug]: Started rendering model main.mart_player_performance
+12:04:56.799271 [info ]: Started model main.mart_tournois_stats
+12:04:56.799278 [debug]: Started rendering model main.mart_tournois_stats
+12:04:56.799285 [info ]: Started model main.stg_parquets
+12:04:56.799289 [debug]: Started rendering model main.stg_parquets
+12:04:56.799317 [info ]: Finished loading project [  0.17s]
+12:04:56.799647 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+12:04:56.799692 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:04:56.799696 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:04:56.799710 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+12:04:56.799737 [info ]: Started analyzing (3 nodes)
+12:04:56.799753 [debug]: Started analyzing model main.mart_tournois_stats
+12:04:56.799775 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:04:56.799786 [debug]: Started analyzing model main.stg_parquets
+12:04:56.799800 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:04:56.799806 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:04:56.799814 [debug]: Started analyzing model main.mart_player_performance
+12:04:56.799920 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:04:56.799938 [info ]:  Succeeded [-------] model main.stg_parquets (view)
+12:04:56.800263 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:04:56.800281 [info ]:  Succeeded [-------] model main.mart_player_performance (view)
+12:04:56.801848 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+12:04:56.801884 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:04:56.801891 [info ]:  Succeeded [  0.00s] model main.mart_tournois_stats (view)
+12:04:56.803770 [info ]: Started scheduling
+12:04:56.803815 [info ]: Finished scheduling [  0.00s]
+12:04:56.804652 [info ]: Cached model count updated: 3 models (accurate)
+12:04:58.320599 [info ]: Started loading project
+12:04:58.321060 [info ]: Loading profiles.yml
+12:04:58.334809 [info ]: Cached model count updated: 3 models (estimate)
+12:04:58.334840 [info ]: Cached model count updated: 3 models (accurate)
+12:04:58.334860 [info ]: Started scheduling
+12:04:58.334900 [info ]: Finished scheduling [  0.00s]
+12:04:58.334911 [debug]: Compilation - 3 nodes selected: {"model.dilemme_prisonnier.mart_player_performance", "model.dilemme_prisonnier.mart_tournois_stats", "model.dilemme_prisonnier.stg_parquets"}
+12:04:58.463536 [info ]: Started building task graph
+12:04:58.463593 [info ]: Finished building task graph [  0.00s]
+12:04:58.463708 [info ]: Started rendering (3 nodes)
+12:04:58.463725 [info ]: Started model main.mart_player_performance
+12:04:58.463734 [debug]: Started rendering model main.mart_player_performance
+12:04:58.463757 [info ]: Started model main.mart_tournois_stats
+12:04:58.463765 [debug]: Started rendering model main.mart_tournois_stats
+12:04:58.463774 [info ]: Started model main.stg_parquets
+12:04:58.463778 [debug]: Started rendering model main.stg_parquets
+12:04:58.463807 [info ]: Finished loading project [  0.14s]
+12:04:58.464119 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_player_performance at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_player_performance.sql
+12:04:58.464122 [debug]: Compiled SQL for node model.dilemme_prisonnier.mart_tournois_stats at target\.lsp\compiled\dilemme_prisonnier\models\marts\mart_tournois_stats.sql
+12:04:58.464161 [debug]: Compiled SQL for node model.dilemme_prisonnier.stg_parquets at target\.lsp\compiled\dilemme_prisonnier\models\staging\stg_parquets.sql
+12:04:58.464201 [debug]: Finished rendering [  0.00s] model main.mart_tournois_stats [success]
+12:04:58.464229 [info ]: Started analyzing (3 nodes)
+12:04:58.464237 [debug]: Started analyzing model main.mart_tournois_stats
+12:04:58.464251 [debug]: Finished rendering [  0.00s] model main.mart_player_performance [success]
+12:04:58.464260 [debug]: Started analyzing model main.mart_player_performance
+12:04:58.464268 [debug]: Finished rendering [  0.00s] model main.stg_parquets [success]
+12:04:58.464272 [info ]: Finished rendering [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:04:58.464277 [debug]: Started analyzing model main.stg_parquets
+12:04:58.464478 [debug]: Finished analyzing [  0.00s] model main.stg_parquets [success]
+12:04:58.464494 [info ]:  Succeeded [-------] model main.stg_parquets (view)
+12:04:58.464657 [debug]: Finished analyzing [  0.00s] model main.mart_player_performance [success]
+12:04:58.464672 [info ]:  Succeeded [-------] model main.mart_player_performance (view)
+12:04:58.466145 [debug]: Finished analyzing [  0.00s] model main.mart_tournois_stats [success]
+12:04:58.466160 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+12:04:58.466165 [info ]:  Succeeded [  0.00s] model main.mart_tournois_stats (view)
+12:04:58.468033 [info ]: Started scheduling
+12:04:58.468064 [info ]: Finished scheduling [  0.00s]
+12:04:58.468877 [info ]: Cached model count updated: 3 models (accurate)
+12:08:57.248541 [info ]: Started loading project
+12:08:57.248690 [info ]: Finished loading project [  0.00s]
+12:08:57.248851 [info ]: Cached model count updated: 3 models (accurate)
+12:08:58.774933 [info ]: Started loading project
+12:08:58.775041 [info ]: Finished loading project [  0.00s]
+12:08:58.775123 [info ]: Cached model count updated: 3 models (accurate)

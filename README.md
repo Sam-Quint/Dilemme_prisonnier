@@ -36,10 +36,26 @@ Dilemme_prisonnier/
 │       │   ├── stg_parquets.sql   → Vue brute de silver.parquet
 │       │   └── schema.yml
 │       └── marts/
-│           ├── mart_tournois_stats.sql       → Stats par tournoi
-│           ├── mart_matchup.sql              → Comparaison personnalité vs adversaire
-│           ├── mart_personnalite_global.sql  → Classement global par personnalité
-│           └── schema.yml
+│           ├── schema.yml
+│           ├── mart_tournois_stats.sql
+│           ├── mart_matchup.sql
+│           ├── mart_personnalite_global.sql
+│           ├── mart_frequence_personnalite.sql
+│           ├── mart_classement_liberte.sql
+│           ├── mart_distribution_resultats.sql
+│           ├── mart_taux_cooperation.sql
+│           ├── mart_matchup_liberte.sql
+│           ├── mart_matchup_cooperation_mutuelle.sql
+│           ├── mart_matchup_trahison_mutuelle.sql
+│           ├── mart_exploitation.sql
+│           ├── mart_meilleur_adversaire.sql
+│           ├── mart_pire_adversaire.sql
+│           ├── mart_evolution_early_late.sql
+│           ├── mart_serie_cooperation.sql
+│           ├── mart_reaction_apres_trahison.sql
+│           ├── mart_meilleur_matchup.sql
+│           ├── mart_pire_matchup.sql
+│           └── mart_nb_tournois_par_matchup.sql
 │
 └── Windmill/
     ├── s1_Bronze.py  → Transforme JSON en parquet (Windmill)
@@ -115,16 +131,57 @@ cd Tournois && python tournoi.py
 # 2. Transformer en Parquet (Silver)
 cd Traitement && python Transforme_json_to_parquet.py
 
-# 3. Construire les modèles DBT (Gold)
-dbt run  --project-dir dbt --profiles-dir dbt
-dbt test --project-dir dbt --profiles-dir dbt
+# 3. Construire les modèles DBT (Gold) — depuis le dossier dbt/
+cd dbt
+dbt run
+dbt test
 ```
+
+> Les commandes dbt doivent être lancées depuis le dossier `dbt/` pour que les chemins relatifs (`../Data/Gold/`, `../Data/Silver/`) soient résolus correctement.
 
 ## Modèles DBT
 
+### Staging
+
 | Modèle | Type | Description |
 |---|---|---|
-| `stg_parquets` | View | Vue brute de silver.parquet |
-| `mart_tournois_stats` | Table | Stats complètes par tournoi |
-| `mart_matchup` | Table | Taux libre/prison/peine par couple (personnalité, adversaire) |
-| `mart_personnalite_global` | Table | Classement global par personnalité (trié par taux libre) |
+| `stg_parquets` | View | Vue brute de silver.parquet — base de tous les marts |
+
+### Marts — Personnalités
+
+| Modèle | Description |
+|---|---|
+| `mart_personnalite_global` | Performance globale par personnalité (taux libre moyen pondéré) |
+| `mart_frequence_personnalite` | Nombre de tournois et total de rounds par personnalité |
+| `mart_classement_liberte` | Classement des personnalités par taux de liberté |
+| `mart_distribution_resultats` | Distribution en % des résultats (Libre / Prison_max / Peine_partagée) |
+| `mart_taux_cooperation` | % de rounds avec choix Coopéré vs Trahir par personnalité |
+| `mart_reaction_apres_trahison` | Comportement au round suivant une trahison subie |
+| `mart_evolution_early_late` | Comportement en début (early) vs fin (late) de tournoi |
+
+### Marts — Matchups (paire personnalité/adversaire)
+
+| Modèle | Description |
+|---|---|
+| `mart_matchup` | Taux libre/prison/peine par couple (personnalité, adversaire) |
+| `mart_matchup_liberte` | Taux de liberté par paire |
+| `mart_matchup_cooperation_mutuelle` | % de rounds où les deux coopèrent |
+| `mart_matchup_trahison_mutuelle` | % de rounds où les deux trahissent |
+| `mart_exploitation` | % de rounds où une personnalité trahit l'autre qui coopère |
+| `mart_meilleur_adversaire` | Adversaire contre qui chaque personnalité obtient le plus de liberté |
+| `mart_pire_adversaire` | Adversaire contre qui chaque personnalité obtient le moins de liberté |
+
+### Marts — Paires symétriques
+
+| Modèle | Description |
+|---|---|
+| `mart_nb_tournois_par_matchup` | Nombre de tournois et de rounds par paire (ordre non significatif) |
+| `mart_meilleur_matchup` | Paires avec le meilleur taux de liberté combiné |
+| `mart_pire_matchup` | Paires avec le plus fort taux de prison combiné |
+| `mart_serie_cooperation` | Séries de coopération mutuelle consécutives par paire |
+
+### Marts — Historique brut
+
+| Modèle | Description |
+|---|---|
+| `mart_tournois_stats` | Stats brutes par tournoi (une ligne par tournoi) |
