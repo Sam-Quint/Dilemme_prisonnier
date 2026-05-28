@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="taux_trahison_mutuelle", model=get_where_subquery(ref('mart_matchup_trahison_mutuelle'))) }}

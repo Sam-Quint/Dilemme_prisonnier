@@ -1,1 +1,0 @@
-{{ test_accepted_values(column_name="Resultat_P_B", model=get_where_subquery(ref('stg_parquets')), values=["Libre","Prison_max","Peine_partagée"]) }}

@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="nb_tournois", model=get_where_subquery(ref('mart_frequence_personnalite'))) }}

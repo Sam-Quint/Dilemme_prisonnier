@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="taux_prison", model=get_where_subquery(ref('mart_evolution_early_late'))) }}

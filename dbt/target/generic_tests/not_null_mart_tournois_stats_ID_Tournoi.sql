@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="ID_Tournoi", model=get_where_subquery(ref('mart_tournois_stats'))) }}

@@ -1,1 +1,0 @@
-{{ test_unique(column_name="personnalite", model=get_where_subquery(ref('mart_frequence_personnalite'))) }}

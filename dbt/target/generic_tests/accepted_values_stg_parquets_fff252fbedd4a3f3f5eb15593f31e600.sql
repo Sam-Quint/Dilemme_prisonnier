@@ -1,1 +1,0 @@
-{{ test_accepted_values(column_name="Player_A", model=get_where_subquery(ref('stg_parquets')), values=["Coopérer","Trahir","Hazard","Reflexion"]) }}
