@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="Nb_tour", model=get_where_subquery(ref('stg_parquets'))) }}

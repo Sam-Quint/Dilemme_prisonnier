@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="taux_libre", model=get_where_subquery(ref('mart_evolution_early_late'))) }}

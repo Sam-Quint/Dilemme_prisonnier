@@ -1,0 +1,315 @@
+version: 2
+
+models:
+  - name: mart_tournois_stats
+    description: "Statistiques brutes par tournoi (une ligne par tournoi)."
+    columns:
+      - name: ID_Tournoi
+        tests:
+          - not_null
+          - unique
+      - name: taux_libre_A
+        tests:
+          - not_null
+      - name: taux_libre_B
+        tests:
+          - not_null
+
+  - name: mart_matchup
+    description: "Comparaison personnalité vs adversaire — Player_A et Player_B normalisés via UNION ALL."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+      - name: adversaire
+        tests:
+          - not_null
+      - name: taux_libre
+        description: "% de rounds où cette personnalité obtient 'Libre' face à cet adversaire."
+        tests:
+          - not_null
+      - name: taux_prison
+        description: "% de rounds où cette personnalité obtient 'Prison_max' face à cet adversaire."
+        tests:
+          - not_null
+      - name: taux_peine
+        description: "% de rounds où cette personnalité obtient 'Peine_partagée' face à cet adversaire."
+        tests:
+          - not_null
+
+  - name: mart_personnalite_global
+    description: "Performance globale par personnalité, toutes confrontations confondues."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+          - unique
+      - name: avg_taux_libre
+        description: "Taux de liberté moyen pondéré sur l'ensemble des rounds joués."
+        tests:
+          - not_null
+
+  - name: mart_frequence_personnalite
+    description: "Nombre de tournois joués et total de rounds par personnalité."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+          - unique
+      - name: nb_tournois
+        description: "Nombre de tournois distincts où la personnalité a participé."
+        tests:
+          - not_null
+      - name: total_rounds
+        description: "Somme de tous les rounds joués par cette personnalité."
+        tests:
+          - not_null
+
+  - name: mart_classement_liberte
+    description: "Classement des personnalités par taux de liberté, toutes confrontations confondues."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+          - unique
+      - name: classement
+        description: "Rang 1 = meilleur taux de liberté."
+        tests:
+          - not_null
+      - name: taux_libre
+        description: "Taux de résultat 'Libre' sur tous les rounds."
+        tests:
+          - not_null
+
+  - name: mart_distribution_resultats
+    description: "Distribution en % des trois résultats (Libre, Prison_max, Peine_partagée) par personnalité."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+          - unique
+      - name: pct_libre
+        tests:
+          - not_null
+      - name: pct_prison
+        tests:
+          - not_null
+      - name: pct_peine
+        tests:
+          - not_null
+
+  - name: mart_taux_cooperation
+    description: "% de rounds où chaque personnalité choisit 'Coopéré' vs 'Trahir'."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+          - unique
+      - name: total_rounds
+        tests:
+          - not_null
+      - name: taux_cooperation
+        description: "% de rounds avec choix 'Coopéré'."
+        tests:
+          - not_null
+      - name: taux_trahison
+        description: "% de rounds avec choix 'Trahir'."
+        tests:
+          - not_null
+
+  - name: mart_matchup_liberte
+    description: "Vue filtrée de mart_matchup centrée sur le taux de liberté par paire personnalité/adversaire."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+      - name: adversaire
+        tests:
+          - not_null
+      - name: taux_libre
+        tests:
+          - not_null
+
+  - name: mart_matchup_cooperation_mutuelle
+    description: "Taux de coopération mutuelle (les deux joueurs coopèrent) par paire."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+      - name: adversaire
+        tests:
+          - not_null
+      - name: taux_cooperation_mutuelle
+        description: "% de rounds où les deux personnalités coopèrent simultanément."
+        tests:
+          - not_null
+
+  - name: mart_matchup_trahison_mutuelle
+    description: "Taux de trahison mutuelle (les deux joueurs trahissent) par paire."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+      - name: adversaire
+        tests:
+          - not_null
+      - name: taux_trahison_mutuelle
+        description: "% de rounds où les deux personnalités trahissent simultanément."
+        tests:
+          - not_null
+
+  - name: mart_exploitation
+    description: "% de rounds où une personnalité trahit pendant que son adversaire coopère (exploitation)."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+      - name: adversaire
+        tests:
+          - not_null
+      - name: taux_exploitation
+        description: "% de rounds où personnalite trahit ET adversaire coopère."
+        tests:
+          - not_null
+
+  - name: mart_meilleur_adversaire
+    description: "Meilleur adversaire pour chaque personnalité (celui contre qui elle obtient le plus de liberté)."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+      - name: meilleur_adversaire
+        description: "Adversaire contre lequel la personnalité obtient le meilleur taux de liberté."
+        tests:
+          - not_null
+      - name: taux_libre
+        tests:
+          - not_null
+
+  - name: mart_pire_adversaire
+    description: "Pire adversaire pour chaque personnalité (celui contre qui elle obtient le plus de prison)."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+      - name: pire_adversaire
+        description: "Adversaire contre lequel la personnalité obtient le pire taux de liberté."
+        tests:
+          - not_null
+      - name: taux_libre
+        tests:
+          - not_null
+
+  - name: mart_evolution_early_late
+    description: "Comparaison du comportement en début (Run ≤ 100, phase='early') vs fin (Run > Nb_tour-100, phase='late') de tournoi."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+      - name: phase
+        description: "'early' ou 'late'."
+        tests:
+          - not_null
+      - name: taux_libre
+        description: "Taux de liberté sur la phase considérée."
+        tests:
+          - not_null
+      - name: taux_prison
+        tests:
+          - not_null
+
+  - name: mart_serie_cooperation
+    description: "Analyse des séries de coopération mutuelle consécutives par paire de personnalités."
+    columns:
+      - name: perso_1
+        tests:
+          - not_null
+      - name: perso_2
+        tests:
+          - not_null
+      - name: nb_series
+        description: "Nombre de séries de coopération détectées."
+        tests:
+          - not_null
+      - name: longueur_moyenne
+        description: "Longueur moyenne d'une série de coopération (en rounds)."
+        tests:
+          - not_null
+      - name: longueur_max
+        description: "Plus longue série de coopération continue observée."
+        tests:
+          - not_null
+
+  - name: mart_reaction_apres_trahison
+    description: "Réponse de chaque personnalité au round suivant une trahison subie."
+    columns:
+      - name: personnalite
+        tests:
+          - not_null
+          - unique
+      - name: nb_trahisons_subies
+        description: "Nombre total de rounds où la personnalité a subi une trahison."
+        tests:
+          - not_null
+      - name: pct_repond_trahison
+        description: "% de fois où la personnalité répond par une trahison au round suivant."
+        tests:
+          - not_null
+      - name: pct_repond_cooperation
+        description: "% de fois où la personnalité répond par une coopération au round suivant."
+        tests:
+          - not_null
+
+  - name: mart_meilleur_matchup
+    description: "Paires de personnalités avec le meilleur taux de liberté combiné (coopération mutuelle élevée)."
+    columns:
+      - name: perso_1
+        tests:
+          - not_null
+      - name: perso_2
+        tests:
+          - not_null
+      - name: taux_liberte_combine
+        description: "% moyen de liberté des deux personnalités sur l'ensemble des rounds."
+        tests:
+          - not_null
+      - name: taux_double_liberte
+        description: "% de rounds où les deux personnalités obtiennent 'Libre' simultanément."
+        tests:
+          - not_null
+
+  - name: mart_pire_matchup
+    description: "Paires de personnalités avec le plus fort taux de prison combiné (trahisons mutuelles élevées)."
+    columns:
+      - name: perso_1
+        tests:
+          - not_null
+      - name: perso_2
+        tests:
+          - not_null
+      - name: taux_prison_combine
+        description: "% moyen de Prison_max des deux personnalités sur l'ensemble des rounds."
+        tests:
+          - not_null
+      - name: taux_rounds_avec_prison
+        description: "% de rounds où au moins une des deux personnalités obtient 'Prison_max'."
+        tests:
+          - not_null
+
+  - name: mart_nb_tournois_par_matchup
+    description: "Nombre de tournois distincts joués et total de rounds par paire de personnalités."
+    columns:
+      - name: perso_1
+        tests:
+          - not_null
+      - name: perso_2
+        tests:
+          - not_null
+      - name: nb_tournois
+        description: "Nombre de tournois distincts où cette paire s'est affrontée."
+        tests:
+          - not_null
+      - name: total_rounds
+        description: "Somme de tous les rounds joués entre cette paire."
+        tests:
+          - not_null

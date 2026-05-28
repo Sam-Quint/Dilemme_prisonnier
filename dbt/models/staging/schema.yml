@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: stg_parquets
+    description: "Vue brute de Data/Silver/*.parquet — une ligne par round avec les métadonnées du tournoi."
+    columns:
+      - name: ID_Tournoi
+        description: "Identifiant unique du tournoi."
+        tests:
+          - not_null
+      - name: Date
+        description: "Date et heure de génération du tournoi."
+        tests:
+          - not_null
+      - name: Nb_tour
+        description: "Nombre total de rounds du tournoi."
+        tests:
+          - not_null
+      - name: Player_A
+        description: "Personnalité du joueur A."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["Coopérer", "Trahir", "Hazard", "TitforTat", "GrimTrigger", "RandomTitforTat", "Pavlov", "Reflexion", "LLMLibre", "Egoiste", "Altruiste"]
+      - name: Player_B
+        description: "Personnalité du joueur B."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["Coopérer", "Trahir", "Hazard", "TitforTat", "GrimTrigger", "RandomTitforTat", "Pavlov", "Reflexion", "LLMLibre", "Egoiste", "Altruiste"]
+      - name: Run
+        description: "Numéro du round dans le tournoi."
+        tests:
+          - not_null
+      - name: Choix_P_A
+        description: "Choix du joueur A pour ce round."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["Coopéré", "Trahir"]
+      - name: Choix_P_B
+        description: "Choix du joueur B pour ce round."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["Coopéré", "Trahir"]
+      - name: Resultat_P_A
+        description: "Résultat obtenu par le joueur A."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["Libre", "Prison_max", "Peine_partagée"]
+      - name: Resultat_P_B
+        description: "Résultat obtenu par le joueur B."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["Libre", "Prison_max", "Peine_partagée"]

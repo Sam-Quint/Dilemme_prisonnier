@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="pct_prison", model=get_where_subquery(ref('mart_distribution_resultats'))) }}

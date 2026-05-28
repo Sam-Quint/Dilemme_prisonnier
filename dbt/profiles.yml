@@ -1,0 +1,6 @@
+dilemme_prisonnier:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../Data/Gold/dilemme_prisonnier.duckdb

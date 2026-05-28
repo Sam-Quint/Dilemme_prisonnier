@@ -1,0 +1,22 @@
+
+  
+    
+    
+
+    create  table
+      "dilemme_prisonnier"."main"."mart_nb_tournois_par_matchup__dbt_tmp"
+  
+    as (
+      
+
+SELECT
+    LEAST(Player_A, Player_B)    AS perso_1,
+    GREATEST(Player_A, Player_B) AS perso_2,
+    COUNT(DISTINCT ID_Tournoi)   AS nb_tournois,
+    SUM(Nb_tour)                 AS total_rounds
+FROM "dilemme_prisonnier"."main"."stg_parquets"
+GROUP BY LEAST(Player_A, Player_B), GREATEST(Player_A, Player_B)
+ORDER BY nb_tournois DESC
+    );
+  
+  

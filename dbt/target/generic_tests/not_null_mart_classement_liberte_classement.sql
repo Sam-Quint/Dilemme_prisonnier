@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="classement", model=get_where_subquery(ref('mart_classement_liberte'))) }}

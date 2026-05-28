@@ -1,116 +1,130 @@
 # Dilemme_prisonnier
 
-## Context : 
+## Contexte
 
-2 prisonniers sont dans des salles séparé sans communication. 
-Ils sont 2 choix menant à 3 concéquences possibles.
-- Coopéré (avec leur camarade)
-- Trahir (leur camarade)
+2 prisonniers sont dans des salles séparées sans communication.
+Ils ont 2 choix menant à 3 conséquences possibles.
 
-voici les conséquences : 
-
-Conséquences 1 : 
-- Coopère -> Libre
-- Coopère -> Libre
-
-Dans ce cas, les deux ont coopéré ensemble et sont libre.
-
-Conséquences 2 : 
-- Coopère -> Prison_max
-- Trahit -> Libre
- 
-Dans ce cas, celui qui a trahit est libre mais l'autre qui a coopéré ce retrouve avec une sentence maximal.
-
- Conséquences 3 : 
- - Trahit -> Prison moitié 
- - Trahit -> Prison moitié
-
-Dans ce cas, les deux ont trahit l'autre et donc les deux on obtenue une peine de prison allégé. 
+| Joueur A | Joueur B | Résultat A | Résultat B |
+|---|---|---|---|
+| Coopère | Coopère | Libre | Libre |
+| Coopère | Trahit | Prison_max | Libre |
+| Trahit | Coopère | Libre | Prison_max |
+| Trahit | Trahit | Peine_partagée | Peine_partagée |
 
 ## Arborescence
 
-- \ data                                                                        <------ Localisation des données
-- \ data \ Bronze (json)                                                        <------ Bronze
-- \ data \ Silver (parquet)                                                     <------ Silver
-- \ data \ Gold (DuckDB)                                                        <------ Gold
+```
+Dilemme_prisonnier/
+├── Data/
+│   ├── Bronze/       → Tournois bruts (JSON)
+│   ├── Silver/       → silver.parquet (1 ligne par round)
+│   └── Gold/         → dilemme_prisonnier.duckdb (DBT)
+│
+├── Tournois/
+│   ├── tournoi.py        → Moteur de tournoi + sauvegarde JSON
+│   └── personnalites.py  → Toutes les personnalités et leurs logiques
+│
+├── Traitement/
+│   └── Transforme_json_to_parquet.py  → Bronze → Silver
+│
+├── dbt/
+│   ├── dbt_project.yml
+│   ├── profiles.yml
+│   └── models/
+│       ├── staging/
+│       │   ├── stg_parquets.sql   → Vue brute de silver.parquet
+│       │   └── schema.yml
+│       └── marts/
+│           ├── mart_tournois_stats.sql       → Stats par tournoi
+│           ├── mart_matchup.sql              → Comparaison personnalité vs adversaire
+│           ├── mart_personnalite_global.sql  → Classement global par personnalité
+│           └── schema.yml
+│
+└── Windmill/
+    ├── s1_Bronze.py  → Transforme JSON en parquet (Windmill)
+    └── s2_Dbt.py     → Lance DBT (Windmill)
+```
 
-- \ Tournois                                                                    <------ Localisation du traitement et déroulement des tournois
-- \ Tournois \ tournoi.py                                                       <------ Script qui gère les tounois et le déroulé. 
-- \ Tournois \ personnalites.py                                                 <------ Gère les personnalités et leur choix.
+## Structure du JSON (Bronze)
 
-- \ Traitement \ Transforme_json_to_parquet.py                                  <------ Transforme JSON en parquet
-
-- \ Windmill \ s1_Bronze.py                                                     <------ Transforme JSON en parquet pour windmill
-- \ Windmill \ s2_Dbt.py                                                        <------ Lance et traite dbt pour windmill
-
-- \ models \ marts (Tables - DBT)                                               <------ Tables pour DuckDB
-- \ models \ marts \ schema.yml (Schéma des tables)                             <------ Tables pour DuckDB
-- \ models \ staging (View - DBT)                                               <------ Views pour DuckDB
-- \ models \ staging \ schema.yml (Schéma des tables)                           <------ Tables pour DuckDB
-
-## Structure Json 
-
-{ 
-    - ID_Tournoi : "Exemple ID"
-    - Nb_tour : XXXX
-    - Player_A : "Personnalité"
-    - Player_B : "Personnalité"
-    - Runs : [
+```json
+{
+    "ID_Tournoi": "04581d3b",
+    "Date": "2026-05-27T11:24:19",
+    "Nb_tour": 2000,
+    "Player_A": "TitforTat",
+    "Player_B": "Hazard",
+    "Runs": [
         {
-            - Run : X
-            - Choix_P_A : "Choix"
-            - Choix_P_B : "Choix"
-            - Resultat_P_A : "Resultat"
-            - Resultat_P_B : "Resultat"
+            "Run": 1,
+            "Choix_P_A": "Coopéré",
+            "Choix_P_B": "Trahir",
+            "Resultat_P_A": "Prison_max",
+            "Resultat_P_B": "Libre"
         }
     ]
 }
+```
 
-### Possibilité 
+## Structure du Parquet (Silver)
 
-Personnalité : 
-- Coopérer : coopère tout le temps
-- Hazard : choisit au hazard
-- Reflexion : réagit en fonction de son taux de libération
-- Trahir : trahit tout le temps
-- TitforTat" : coopère au premier round, puis imite le choix de l'adversaire au round précédent (non implémenté ici)
-- "GrimTrigger": coopère tant que l'adversaire coopère, mais trahit à jamais si l'adversaire trahit une fois (non implémenté ici)
-- "RandomTitforTat": coopère au premier round, puis imite le choix de l'adversaire au round précédent avec une probabilité de 80%, sinon fait un choix aléatoire (non implémenté ici)
-- "Pavlov" : coopère si les deux joueurs ont fait le même choix au round précédent, sinon trahit (non implémenté ici)
-- "LLM libre" : utilise un modèle de langage pour décider, mais sans historique ni objectif. (non implémenté ici)
+`silver.parquet` — une ligne par round, métadonnées du tournoi répétées :
 
-Choix : 
-- Balancé
-- Ne rien dire
+| ID_Tournoi | Date | Nb_tour | Player_A | Player_B | Run | Choix_P_A | Choix_P_B | Resultat_P_A | Resultat_P_B |
 
-Résultat : 
-- Prison max
-- Libre
-- Peine partagé
+## Personnalités
 
-## Tournois 
+### Algorithmiques (rapides)
 
-### Prompt : 
+| Nom | Comportement |
+|---|---|
+| `Coopérer` | Toujours coopère |
+| `Trahir` | Toujours trahit |
+| `Hazard` | Choix aléatoire 50/50 |
+| `TitforTat` | Coopère au round 1, imite ensuite le dernier choix de l'adversaire |
+| `GrimTrigger` | Coopère jusqu'à la 1ère trahison adverse, puis trahit à jamais |
+| `RandomTitforTat` | Imite l'adversaire à 80%, choix aléatoire à 20% |
+| `Pavlov` | Coopère si même choix que l'adversaire au round précédent, sinon trahit |
 
-#### Personnalité Coopérer : 
-Répond toujours "Coopérer"
+### LLM via Ollama (lentes)
 
-#### Personnalité Trahir : 
-Répond toujours "Trahir"
+| Nom | Comportement |
+|---|---|
+| `Reflexion` | Décide en fonction de son taux de libération |
+| `LLMLibre` | Décide librement sans historique ni objectif |
+| `Egoiste` | Maximise son propre taux de libération, minimise celui de l'adversaire |
+| `Altruiste` | Maximise le taux de libération global (soi + adversaire) |
 
-#### Personnalité Hazard : 
-Choisit une réponse au hazard
+## Lancer un tournoi
 
-#### Personnalité Reflexion : 
-Contexte : 
-Toi et ton camarade ont était arreté pour un Crime. Tu ne peux pas communiquer avec lui.
-Si vous Coopéré ensemble vous êtes tout les deux libre. 
-Si tu coopère mais ton camarade te trahit, il est libre et toi tu obtiens prison à vie. 
-Si tu trahit et lui coopère, tu es libre et lui obtiens la prison à vie. 
-Si vous vous trahissez mutuellement, vous avez tout les deux une peine de prison allégé. 
-Tu dois réfléchir en fonction de ton taux de libération.
+```bash
+cd Tournois
+python tournoi.py
+```
 
-Réponse : 
-Tu réponds toujours "Coopéré" ou "Trahit"
+Par défaut : 2 personnalités aléatoires parmi les rapides, 2000 rounds.
+Pour inclure les LLM, passer `PERSONNALITES_RAPIDES` → `PERSONNALITES_DISPONIBLES` dans le `__main__`.
 
+## Pipeline Bronze → Silver → Gold
 
+```bash
+# 1. Générer les tournois (Bronze)
+cd Tournois && python tournoi.py
+
+# 2. Transformer en Parquet (Silver)
+cd Traitement && python Transforme_json_to_parquet.py
+
+# 3. Construire les modèles DBT (Gold)
+dbt run  --project-dir dbt --profiles-dir dbt
+dbt test --project-dir dbt --profiles-dir dbt
+```
+
+## Modèles DBT
+
+| Modèle | Type | Description |
+|---|---|---|
+| `stg_parquets` | View | Vue brute de silver.parquet |
+| `mart_tournois_stats` | Table | Stats complètes par tournoi |
+| `mart_matchup` | Table | Taux libre/prison/peine par couple (personnalité, adversaire) |
+| `mart_personnalite_global` | Table | Classement global par personnalité (trié par taux libre) |

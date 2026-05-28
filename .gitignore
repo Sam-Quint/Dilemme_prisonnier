@@ -14,8 +14,13 @@ __pycache__/
 *.pyo
 requirements.txt
 
+# Ignore the Exemple and Tests folders that contain example and test files
+Exemple/*
+Tests/*
+
 # Ignore the .env file that contains environment variables
 .env
 
 # Ignore the claude folder
 .claude
+dbt_internal_packages/

@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="avg_taux_libre", model=get_where_subquery(ref('mart_personnalite_global'))) }}

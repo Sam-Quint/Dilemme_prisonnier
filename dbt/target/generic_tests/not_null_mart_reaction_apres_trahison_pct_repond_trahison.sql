@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="pct_repond_trahison", model=get_where_subquery(ref('mart_reaction_apres_trahison'))) }}

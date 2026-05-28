@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="Resultat_P_A", model=get_where_subquery(ref('stg_parquets'))) }}

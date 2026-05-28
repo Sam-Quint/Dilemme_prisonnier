@@ -1,0 +1,22 @@
+
+    
+    
+
+with all_values as (
+
+    select
+        Player_B as value_field,
+        count(*) as n_records
+
+    from "dilemme_prisonnier"."main"."stg_parquets"
+    group by Player_B
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Coopérer','Trahir','Hazard','Reflexion'
+)
+
+

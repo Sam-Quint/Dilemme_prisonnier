@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="meilleur_adversaire", model=get_where_subquery(ref('mart_meilleur_adversaire'))) }}

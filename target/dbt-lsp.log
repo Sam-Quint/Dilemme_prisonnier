@@ -1,0 +1,9 @@
+==================== 2026-05-28T11:51:27.130635Z | 6d47c44e-13ad-4b21-9968-efbd95e1822a ====================
+11:51:27.130682 [info ]: Starting dbt LSP server
+11:51:27.130696 [info ]: Connecting to LSP client on port 8000
+11:51:27.440314 [info ]: Successfully connected to LSP client
+11:51:27.440335 [info ]: Creating LSP service...
+11:51:27.498817 [info ]: Creating LSP server...
+11:51:27.498838 [info ]: Starting LSP server...
+11:51:27.517442 [info ]: Loading profiles.yml
+11:51:27.546342 [info ]: Waiting for lease on 'target' directory

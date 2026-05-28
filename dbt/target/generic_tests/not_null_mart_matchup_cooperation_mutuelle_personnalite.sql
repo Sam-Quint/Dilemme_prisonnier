@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="personnalite", model=get_where_subquery(ref('mart_matchup_cooperation_mutuelle'))) }}

@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="Player_B", model=get_where_subquery(ref('stg_parquets')), values=["Coopérer","Trahir","Hazard","TitforTat","GrimTrigger","RandomTitforTat","Pavlov","Reflexion","LLMLibre","Egoiste","Altruiste"]) }}

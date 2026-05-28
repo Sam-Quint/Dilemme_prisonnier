@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="taux_prison_combine", model=get_where_subquery(ref('mart_pire_matchup'))) }}

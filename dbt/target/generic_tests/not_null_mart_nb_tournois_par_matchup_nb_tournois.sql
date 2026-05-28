@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="nb_tournois", model=get_where_subquery(ref('mart_nb_tournois_par_matchup'))) }}
