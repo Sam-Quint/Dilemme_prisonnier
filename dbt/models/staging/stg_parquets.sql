@@ -1,3 +1,3 @@
 {{ config(materialized='view') }}
 
-SELECT * FROM read_parquet('../Data/Silver/*.parquet')
+SELECT * FROM read_parquet('{{ get_silver_path() }}')

@@ -1,0 +1,45 @@
+services:
+
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: windmill
+      POSTGRES_DB: windmill
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  windmill_server:
+    image: ghcr.io/windmill-labs/windmill:main
+    restart: unless-stopped
+    pull_policy: always
+    environment:
+      DATABASE_URL: postgres://postgres:windmill@db/windmill
+      MODE: server
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  windmill_worker:
+    build:
+      context: .
+      dockerfile: Windmill/Dockerfile
+    restart: unless-stopped
+    pull_policy: never
+    environment:
+      DATABASE_URL: postgres://postgres:windmill@db/windmill
+      MODE: worker
+      WORKER_GROUP: default
+      PROJECT_DIR: /app
+      # Ollama tourne sur le host → accessible via host.docker.internal sur Windows/Mac
+      OLLAMA_HOST: http://host.docker.internal:11434
+    volumes:
+      - .:/app                          # projet monté en entier
+      - worker_cache:/tmp/windmill/cache
+    depends_on:
+      - windmill_server
+
+volumes:
+  db_data:
+  worker_cache:

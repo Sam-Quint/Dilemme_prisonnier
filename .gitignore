@@ -12,7 +12,6 @@ Data/Gold/*
 __pycache__/
 *.pyc
 *.pyo
-requirements.txt
 
 # Ignore the Exemple and Tests folders that contain example and test files
 Exemple/*

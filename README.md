@@ -57,9 +57,15 @@ Dilemme_prisonnier/
 │           ├── mart_pire_matchup.sql
 │           └── mart_nb_tournois_par_matchup.sql
 │
-└── Windmill/
-    ├── s1_Bronze.py  → Transforme JSON en parquet (Windmill)
-    └── s2_Dbt.py     → Lance DBT (Windmill)
+├── Windmill/
+│   ├── Dockerfile        → Image worker personnalisée (python3 -m pip)
+│   ├── s1_tournoi.py     → Step 1 : lance un tournoi → Data/Bronze
+│   ├── s2_parquet.py     → Step 2 : Bronze → Silver (parquet)
+│   ├── s3_dbt_run.py     → Step 3 : dbt run (reconstruit Gold)
+│   └── s4_dbt_test.py    → Step 4 : dbt test (validation qualité)
+│
+├── requirements.txt      → Dépendances Python complètes du projet
+└── docker-compose.yml    → ⚠️ NON FONCTIONNEL — infrastructure Windmill (WIP)
 ```
 
 ## Structure du JSON (Bronze)
@@ -185,3 +191,35 @@ dbt test
 | Modèle | Description |
 |---|---|
 | `mart_tournois_stats` | Stats brutes par tournoi (une ligne par tournoi) |
+
+## Windmill — Orchestration du pipeline
+
+Les scripts dans `Windmill/` sont conçus pour être exécutés comme steps d'un **Flow Windmill**, dans cet ordre :
+
+| Step | Fichier | Rôle | Paramètres exposés |
+|---|---|---|---|
+| 1 | `s1_tournoi.py` | Lance un tournoi, sauvegarde JSON en Bronze | `personnalite_a`, `personnalite_b`, `nb_tours`, `llm` |
+| 2 | `s2_parquet.py` | Transforme tous les JSON Bronze en `silver.parquet` | — |
+| 3 | `s3_dbt_run.py` | Exécute `dbt run` (reconstruit toutes les tables Gold) | — |
+| 4 | `s4_dbt_test.py` | Exécute `dbt test` (validation qualité) | — |
+
+Chaque script utilise la variable d'environnement `PROJECT_DIR` pour localiser le projet (injectée par Docker ou le venv local).
+
+### Lancer les steps localement (sans Windmill)
+
+```bash
+# Venv activé, depuis la racine du projet
+python -c "from Windmill.s1_tournoi import main; print(main())"
+python -c "from Windmill.s2_parquet import main; print(main())"
+python -c "from Windmill.s3_dbt_run import main; print(main())"
+python -c "from Windmill.s4_dbt_test import main; print(main())"
+```
+
+### Docker — ⚠️ Non fonctionnel (WIP)
+
+Le `docker-compose.yml` est en cours de développement. Le worker Windmill basé sur `ghcr.io/windmill-labs/windmill:main` ne dispose pas de `pip` en PATH — le Dockerfile utilise `python3 -m pip` comme contournement, mais l'intégration complète n'est pas encore validée.
+
+```bash
+# Ne pas utiliser en production
+docker compose up --build -d   # ⚠️ WIP
+```

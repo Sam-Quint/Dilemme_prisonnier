@@ -91,6 +91,7 @@ def _llm_decision(system_prompt: str, user_msg: str) -> str:
             {"role": "system", "content": system_prompt},
             {"role": "user",   "content": user_msg},
         ],
+        options={"num_ctx": 512, "keep_alive": "30m"},
     )
     texte = response.message.content.strip()
     if "Trahir" in texte or "Trahit" in texte:
